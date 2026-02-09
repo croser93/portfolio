@@ -2,22 +2,23 @@
     <div class="logo">IMG</div>
     <nav>
         <div class="languageBtn">
-            <button><span>EN</span></button>
-            <button><span>DE</span></button>
+            <button (click)="toggleLanguage('en')" [class.active]="activeLanguage === 'en'"><span>EN</span></button>
+            <button (click)="toggleLanguage('de')" [class.active]="activeLanguage === 'de'"><span>DE</span></button>
         </div>
-        <label for="check" class="menuButton">
-            <input id="check" type="checkbox">
+        <label class="menuButton">
+            <input type="checkbox" [checked]="isMenuOpen" (change)="toggleMenuBar()">
             <span class="top"></span>
             <span class="mid"></span>
             <span class="bot"></span>
-        </label>
-        
-            <div class="dnone">
-                <a href="#">About me</a>
-                <a href="#">My Skills</a>
-            <a href="#">MY Projects</a>
-           </div>
-        
+        </label> 
     </nav>
-
+    
 </section>
+
+<div id="menuBar" [class.dnone]="!isMenuOpen">
+    <div class="menu content-beg">
+        <a href="#">About me</a>
+        <a href="#">My Skills</a>
+        <a href="#">MY Projects</a>
+    </div>
+</div>

@@ -7,7 +7,18 @@ import { Component } from '@angular/core';
   styleUrl: './header.scss',
 })
 export class Header {
+  activeLanguage: 'en' | 'de' = 'en';
+  isMenuOpen = false;
 
 
+  toggleLanguage(lang: 'en' | 'de') {
+  this.activeLanguage = lang;
+  console.log(`Language switched to: ${lang}`);
+  }
+
+  toggleMenuBar(){
+  this.isMenuOpen = !this.isMenuOpen;
+
+  }
 
 }
