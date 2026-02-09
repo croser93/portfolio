@@ -9,14 +9,14 @@
  }
 
  @font-face {
-   font-family: "Overpass-extra-bold";
+   font-family: "Syne-ExtraBold";
    src: url("../../portfolio/public/assets/fonts/syne/Syne-ExtraBold.ttf") format("truetype");
    font-style: normal;
    font-display: swap;
  }
 
  @font-face {
-   font-family: "Overpass-bold";
+   font-family: "Syne-Bold";
    src: url("../../portfolio/public/assets/fonts/syne/Syne-Bold.ttf") format("truetype");
    font-style: normal;
    font-display: swap;
@@ -31,4 +31,8 @@
  body {
    font-family: "Overpass", sans-serif;
    background-color: var(--bg-color);
+ }
+
+ .border{
+    margin: 0px 100px;
  }
