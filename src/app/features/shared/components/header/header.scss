@@ -1,0 +1,31 @@
+@use '../../../../../styles/variables' as *;
+
+
+section{
+     @include dpf ($jc: space-between,  $g: 32px);
+     height: 100px;
+     width: 100%;
+}
+
+nav{
+    @include dpf ($g: 32px);
+    >.burgerMenu{
+        cursor: pointer;}
+}
+
+.languageBtn{
+    @include dpf ($g: 16px);
+}
+
+button{
+    border: 3px solid var(--highlight2-color);
+    height: 40px;
+    width: 56px;
+    cursor: pointer;
+    background-color: transparent;
+    >span{
+        font-size: 16px;
+        font-family: Syne-Bold;
+    }
+
+    }
