@@ -1,9 +1,8 @@
 section{
-    height: 100vh;
+    height: calc(100vh - 100px);
+    position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
-    position: relative;
     >.hero{
         display: flex;
         flex-direction: column;
@@ -50,7 +49,7 @@ h2{
 
 .email-sidebar {
     position: absolute;
-    left: 120px;
+    left: 0px;
     bottom: 32px; 
     transform: rotate(-90deg);
     transform-origin: left bottom;
