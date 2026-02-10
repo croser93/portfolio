@@ -1,22 +1,37 @@
 @use '../../../../styles/variables' as *;
-section{
+section {
+    margin-top: 100px;
+    border: 3px solid black;
+    position: relative; 
     @include dpf ();
     flex-direction: column;
 }
-.skills-container {
-    @include dpf();
-    flex-wrap: wrap;
-    width: 100%;
 
-    .skill-item {
-        width: calc(20% - 16px); 
-        @include dpf();
-        
-        img {
-            width: 100%;
-            max-width: 80px;
-            height: auto;
-        }
+.skills{
+    width: 100%;
+    padding: 100px 0px;
+    @include dpf ();
+    flex-direction: column;
+    gap: 60px;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 78px 20px; 
+    width: 100%;
+    >.skill-item {
+    @include dpf ();
+     >img{
+         transition: transform 0.3s ease-in-out;
+         height: 80px;
+         width: 80px;
+
+         &:hover {
+            transform: scale(1.4);
+            cursor: pointer;
+         }
+     }
     }
 }
 
@@ -33,11 +48,16 @@ section{
     }   
 }
 
-h2{
+h2 {
+    position: absolute;
+    top: -54px;
+    background-color: var(--bg-color); 
+    padding: 0 24px;    
     font-size: 4.875rem;
     font-family: Syne-ExtraBold;
-        &:hover{
-            color: var(--highlight2-color);
-            cursor: default;
-        }
+
+    &:hover {
+        color: var(--highlight2-color);
+        cursor: default;
+    }
 }
