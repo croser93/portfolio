@@ -21,17 +21,17 @@ section {
     gap: 78px 20px; 
     width: 100%;
     >.skill-item {
-    @include dpf ();
-     >img{
-         transition: transform 0.3s ease-in-out;
-         height: 80px;
-         width: 80px;
+        @include dpf ();
+        >img{
+            transition: transform 0.3s ease-in-out;
+            height: 80px;
+            width: 80px;
 
-         &:hover {
-            transform: scale(1.4);
-            cursor: pointer;
-         }
-     }
+            &:hover {
+                transform: scale(1.4);
+                cursor: pointer;
+            }
+        }
     }
 }
 
