@@ -1,1 +1,17 @@
-<p>skills.components works!</p>
+<section>
+    <h2>My Skills</h2>
+
+    <div class="skills">
+        <div class="skills-container">
+            @for (skill of skillsArry; track skill) {
+                <div class="skill-item">
+                    <img [src]="skill" alt="Skill Icon">
+                </div>
+            }
+        </div>
+        <div class="continuedLearing">
+            <img src="assets/icon/Property 1=Continued learning.svg" alt="learningIcon">
+            <span>Don't see the skill your need? <a href="#">Contact me</a> I'm always ready to learn!</span>
+        </div>
+    </div>
+</section>
