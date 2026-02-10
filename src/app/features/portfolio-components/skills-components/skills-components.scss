@@ -1,0 +1,43 @@
+@use '../../../../styles/variables' as *;
+section{
+    @include dpf ();
+    flex-direction: column;
+}
+.skills-container {
+    @include dpf();
+    flex-wrap: wrap;
+    width: 100%;
+
+    .skill-item {
+        width: calc(20% - 16px); 
+        @include dpf();
+        
+        img {
+            width: 100%;
+            max-width: 80px;
+            height: auto;
+        }
+    }
+}
+
+.continuedLearing{
+     @include dpf ($g:16px);
+     >span{
+        font-family: Overpass;
+        font-size: 22px;
+        font-weight: 400;
+        >a{
+            text-decoration: none;
+            color: var(--highlight2-color);
+        }
+    }   
+}
+
+h2{
+    font-size: 4.875rem;
+    font-family: Syne-ExtraBold;
+        &:hover{
+            color: var(--highlight2-color);
+            cursor: default;
+        }
+}
