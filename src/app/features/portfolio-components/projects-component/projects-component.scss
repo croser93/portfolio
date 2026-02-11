@@ -96,3 +96,10 @@ button{
 
         }   
 }
+
+.rowReverse{
+    flex-direction: row-reverse;
+    >.containerRight{
+        align-items: flex-start;
+    }
+}

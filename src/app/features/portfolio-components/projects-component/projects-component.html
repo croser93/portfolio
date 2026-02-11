@@ -5,12 +5,12 @@
     </div>
 
 @for (project of projects; track project.id; let i = $index) {
-    <div class="projectsContainer">
+    <div class="projectsContainer" [class.rowReverse]="i % 2 !== 0">
         <div>
             <img src="{{ project.img }}" alt="">
         </div>
         <div class="containerRight">
-            <div class="projectsNumber">
+            <div class="projectsNumber" >
                 <span>{{ project.titleId }} / {{ "0" + projects.length }}</span>
             </div>
             <div class="projectsInfo">
