@@ -14,5 +14,4 @@ import { ProjectsComponent } from './projects-component/projects-component';
   styleUrl: './portfolio-components.scss',
 })
 export class PortfolioComponents {
-
 }
