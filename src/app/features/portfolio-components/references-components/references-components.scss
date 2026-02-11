@@ -24,16 +24,30 @@ h2 {
 }
 
 .refContainer{
-     @include dpf ($g:16px);
+     @include dpf ($jc:space-between);
+     width: 100%;
      >div{
-        @include dpf ($g:16px);
+        @include dpf ($g:24px);
         padding: 24px;
         flex-direction: column;
-        max-width: 600px;
-        border: 2px black solid;
+        max-width: 480px;
+        border: 4px black solid;
         text-align: center;
-
-
+        >.commentHead{
+            @include dpf ($g:8px);
+            flex-direction: column;
+            >h4{
+                font-family: Syne-bold;
+                font-size: 1.375rem;
+            }
+            >span{
+                font-size: 1rem;
+            }
+        }
+    >p{font-size: 1.25rem;
+        font-weight: 400;
+        height: 200px;
+    }
      }
 
 
