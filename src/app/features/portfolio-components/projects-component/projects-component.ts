@@ -34,7 +34,7 @@ export class ProjectsComponent {
       title: 'Hellgate Shadowfall',
       codeBase: 'HTML | CSS | Javascript',
       description: 'A simple Jump-and-Run game based on object-oriented approach. Help Elvoron to find coins and mana to fight against the Hellknight.',
-      img: 'assets/img/projects/HellgateShadowfall.JPG',
+      img: 'assets/img/projects/HellgateShadowfall.jpg',
       github: 'https://github.com/croser93/2d-Game.git'
     },
      {
@@ -43,7 +43,7 @@ export class ProjectsComponent {
       title: 'Pokédex',
       codeBase: 'HTML | CSS | Javascript | Api',
       description: 'Based on the PokéAPI a simple libary hat provides and catalogues pokemon information-.',
-      img: 'assets/img/projects/pokedex.JPG',
+      img: 'assets/img/projects/pokedex.jpg',
       github: 'https://github.com/croser93/Pokedex.git'
     }
   ]
