@@ -31,7 +31,6 @@ img{
     width: 820px;
     height: 460px;
     border: 3px solid black;
-
 }
 
 .projectsContainer{
@@ -39,30 +38,47 @@ img{
     display: flex;
     justify-content: space-between;
     width: 100%;
+}
+
+.projectsNumber{
+    @include dpf ();
+    >span{
+        font-size: 48px;
+        font-family: Syne-Bold;
+        font-weight: 700;
+    }
+
+}
+
+.containerRight{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: end;
 
 }
 .projectsInfo{
+    width: 700px;
     >.projectsInfoText{
         @include dpf ($ai: flex-start);
         flex-direction: column;
-        max-width: 475px;
+        padding: 48px 0px;
+        max-width: 540px;
         gap: 16px;
         >h3{
-            font-size: 46px;
+            font-size: 4rem;
             font-family: Syne-ExtraBold;
         }
         >span{
            font-family: Overpass;
-           font-size: 22px;
+           font-size: 2rem;
            color: var(--highlight2-color);
            font-weight: 600;
         }
         >p {
             font-family: Overpass;
-           font-size: 18px;
-
-        }
-        
+           font-size: 1.25rem;
+        }      
     }
 }
 
@@ -73,6 +89,7 @@ button{
     cursor: pointer;
     background-color: var(--bg-color);
     transition: width 0.2s ease, font-weight 0.2s ease;
+    font-size: 18px;
         &:hover{
             font-weight: bolder;
             width: 260px;
