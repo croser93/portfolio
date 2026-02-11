@@ -2,7 +2,7 @@
 section{
     @include dpf ();
     flex-direction: column;
-    margin-top: 100px;
+    margin-top: 120px;
     >.headerProjektComponent {
          @include dpf ();
         flex-direction: column;
