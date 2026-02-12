@@ -10,29 +10,46 @@
             <div class="form-container">
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <div class="form-group">
-                <input [(ngModel)]="contactData.name" type="text" name="name" placeholder="Your name" required>
+                <input #name="ngModel" [(ngModel)]="contactData.name" minlength="1" type="text" name="name" placeholder="Your name" required>
+            </div>
+            <div class="errorContainer">
+              @if (!name.valid && name.touched) {
+                    <span class="errorMassage">Please enter a name</span>
+                }
             </div>
 
             <div class="form-group">
-                <input [(ngModel)]="contactData.email" type="email" name="email" placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                <input #email="ngModel" [(ngModel)]="contactData.email" minlength="5" type="email" name="email" placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+            </div>
+            <div class="errorContainer">
+                @if (!email.valid && email.touched) {
+                    <span class="errorMassage">Please enter a email</span>
+                }
             </div>
 
             <div class="form-group">
                 <textarea #message="ngModel" minlength="5" [(ngModel)]="contactData.message" name="message" placeholder="Your message" required></textarea>
+            </div>
+            <div class="errorContainer">
                 @if (!message.valid && message.touched) {
-                    <span>Please enter a message</span>
+                    <span class="errorMassage">Please enter a message</span>
                 }
             </div>
 
             <div class="checkbox-container">
-                <input type="checkbox" id="privacy" required>
+                <input #checkBox="ngModel" [(ngModel)]="contactData.checkBox" name="checkBox" type="checkbox" id="privacy" required>
                 <label for="privacy" class="checkbox-label">
                     I've read the <a href="#" class="privacy-link">privacy policy</a> and agree to the processing of my data as outlined.
                 </label>
             </div>
+            <div class="errorContainer">
+                @if (!checkBox.valid && checkBox.touched) {
+                    <span class="errorMassage">You need to accept the privacy policy before submitting.</span>
+                }
+            </div>
 
             <div class="button-container">
-                <button type="submit">Send message</button>
+                <button [disabled]="contactForm.invalid" type="submit">Send message</button>
             </div>
         </form>
     </div>

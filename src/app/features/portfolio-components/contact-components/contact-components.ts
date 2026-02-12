@@ -16,6 +16,7 @@ http = inject(HttpClient)
     name: "",
     email: "",
     message: "",
+    checkBox: "",
 
   }
 
