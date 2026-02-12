@@ -9,8 +9,9 @@
 
             <div class="form-container">
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" autocomplete="off">
+
             <div class="form-group">
-                <input #name="ngModel" [(ngModel)]="contactData.name" minlength="1" type="text" name="name" placeholder="Your name" required>
+                <input #name="ngModel" [(ngModel)]="contactData.name" minlength="1" maxlength="40" type="text" name="name" placeholder="Your name" required pattern="[a-zA-Z\s\-äöüÄÖÜß]*">
             </div>
             <div class="errorContainer">
               @if (!name.valid && name.touched) {
@@ -19,7 +20,7 @@
             </div>
 
             <div class="form-group">
-                <input #email="ngModel" [(ngModel)]="contactData.email" minlength="5" type="email" name="email" placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                <input #email="ngModel" [(ngModel)]="contactData.email" minlength="5" maxlength="40" type="email" name="email" placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
             </div>
             <div class="errorContainer">
                 @if (!email.valid && email.touched) {
@@ -28,7 +29,7 @@
             </div>
 
             <div class="form-group">
-                <textarea #message="ngModel" minlength="5" [(ngModel)]="contactData.message" name="message" placeholder="Your message" required></textarea>
+                <textarea #message="ngModel"  [(ngModel)]="contactData.message" minlength="5" maxlength="500" name="message" placeholder="Your message" required></textarea>
             </div>
             <div class="errorContainer">
                 @if (!message.valid && message.touched) {
@@ -42,6 +43,7 @@
                     I've read the <a href="#" class="privacy-link">privacy policy</a> and agree to the processing of my data as outlined.
                 </label>
             </div>
+
             <div class="errorContainer">
                 @if (!checkBox.valid && checkBox.touched) {
                     <span class="errorMassage">You need to accept the privacy policy before submitting.</span>
@@ -51,6 +53,7 @@
             <div class="button-container">
                 <button [disabled]="contactForm.invalid" type="submit">Send message</button>
             </div>
+            
         </form>
     </div>
 

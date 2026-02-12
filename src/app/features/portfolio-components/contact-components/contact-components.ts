@@ -17,7 +17,6 @@ http = inject(HttpClient)
     email: "",
     message: "",
     checkBox: "",
-
   }
 
   mailTest = true;
@@ -47,6 +46,7 @@ http = inject(HttpClient)
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+      console.log("gesendet" + this.contactData)
 
       ngForm.resetForm();
     }
