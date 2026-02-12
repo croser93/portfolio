@@ -8,7 +8,7 @@
             <span>say hello! let's discuss your ideas and make it happen</span>
 
             <div class="form-container">
-        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" autocomplete="off">
             <div class="form-group">
                 <input #name="ngModel" [(ngModel)]="contactData.name" minlength="1" type="text" name="name" placeholder="Your name" required>
             </div>
