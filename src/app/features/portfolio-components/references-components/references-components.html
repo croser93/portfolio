@@ -1,0 +1,17 @@
+<section>
+    <h2>References</h2>
+    <span>I thrive both independently and as part of a team. Here's what my colleagues have to say about working with me.</span>
+
+    <div class="refContainer">
+        @for (comment of humanComments; track comment.id; let i = $index) {
+        <div>
+            <div class="commentHead">
+                <img src="assets/icon/format_quote.svg" alt="">
+                <h4>{{ comment.name }}</h4>
+                <span> {{comment.job}} </span>
+            </div>
+            <p> {{comment.description}} </p>
+        </div>
+    }
+    </div>
+</section>
