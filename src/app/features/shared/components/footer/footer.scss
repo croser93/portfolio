@@ -1,0 +1,24 @@
+@use '../../../../../styles/variables' as *;
+
+section{
+    @include dpf ();
+    width: 100%;
+    >.content {
+        @include dpf ($jc: space-between);
+        padding: 24px 8px;
+        >.containerLeft{
+            @include dpf ();
+            flex-direction: column;
+            >span{
+                color: #FFFCF3;
+                font-size: 1.375rem;
+                font-weight: 400;
+            }
+
+        }
+        >.containerRight{
+        @include dpf ($g:42px); 
+    }
+    };
+
+}
