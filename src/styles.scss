@@ -42,7 +42,15 @@
   width: 100%;
  }
 
+ .width100 {
+  width: 100%;
+ }
+
  .dnone{
     display: none;
  }
 
+.disabled{
+  background-color: grey;
+  cursor: default;
+}

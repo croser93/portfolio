@@ -24,8 +24,6 @@ section {
         @include dpf ();
         >img{
             transition: transform 0.3s ease-in-out;
-            height: 80px;
-            width: 80px;
 
             &:hover {
                 transform: scale(1.4);
@@ -55,7 +53,6 @@ h2 {
     padding: 0 24px;    
     font-size: 4.875rem;
     font-family: Syne-ExtraBold;
-
     &:hover {
         color: var(--highlight2-color);
         cursor: default;

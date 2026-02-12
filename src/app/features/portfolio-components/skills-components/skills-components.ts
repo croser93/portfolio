@@ -8,16 +8,16 @@ import { Component } from '@angular/core';
 })
 export class SkillsComponents {
   skillsArry = [
-    'assets/icon/skills/Property 1=Angular.svg',
-    'assets/icon/skills/Property 1=Typescript.svg',
-    'assets/icon/skills/Property 1=JavScript.svg',
-    'assets/icon/skills/Property 1=html.svg',
-    'assets/icon/skills/Property 1=css.svg',
-    'assets/icon/skills/Property 1=Firebase.svg',
-    'assets/icon/skills/Property 1=Git.svg',
-    'assets/icon/skills/Property 1=Scrum.svg',
-    'assets/icon/skills/Property 1=Api.svg',
-    'assets/icon/skills/Property 1=Md.svg',
+    'assets/icon/skills/angular.svg',
+    'assets/icon/skills/ts.svg',
+    'assets/icon/skills/js.svg',
+    'assets/icon/skills/html.svg',
+    'assets/icon/skills/css.svg',
+    'assets/icon/skills/firebase.svg',
+    'assets/icon/skills/git.svg',
+    'assets/icon/skills/scrum.svg',
+    'assets/icon/skills/api.svg',
+    'assets/icon/skills/md.svg',
   ]
 
 }
