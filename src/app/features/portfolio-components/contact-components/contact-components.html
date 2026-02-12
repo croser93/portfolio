@@ -8,17 +8,17 @@
             <span>say hello! let's discuss your ideas and make it happen</span>
 
             <div class="form-container">
-        <form>
+        <form (ngSubmit)="onSubmit()">
             <div class="form-group">
-                <input type="text" placeholder="Your name" required>
+                <input [(ngModel)]="contactData.name" type="text" name="name" placeholder="Your name" required>
             </div>
 
             <div class="form-group">
-                <input type="email" placeholder="Your email" required>
+                <input [(ngModel)]="contactData.email" type="email" name="email" placeholder="Your email" required>
             </div>
 
             <div class="form-group">
-                <textarea placeholder="Your message" required></textarea>
+                <textarea [(ngModel)]="contactData.message" name="message" placeholder="Your message" required></textarea>
             </div>
 
             <div class="checkbox-container">
