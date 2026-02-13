@@ -39,9 +39,9 @@
 
             <div class="checkbox-container">
                 <input #checkBox="ngModel" [(ngModel)]="contactData.checkBox" name="checkBox" type="checkbox" id="privacy" required>
-                <label for="privacy" class="checkbox-label">
-                    I've read the <a href="#" class="privacy-link">privacy policy</a> and agree to the processing of my data as outlined.
-                </label>
+                <div for="privacy" class="checkbox-label">
+                    I've read the <a routerLink="privacy-policy" class="privacy-link">privacy policy</a> and agree to the processing of my data as outlined.
+                </div>
             </div>
 
             <div class="errorContainer">
