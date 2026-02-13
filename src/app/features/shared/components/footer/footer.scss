@@ -7,7 +7,7 @@ section{
         @include dpf ($jc: space-between);
         padding: 24px 8px;
         >.containerLeft{
-            @include dpf ();
+            @include dpf ($g:16px);
             flex-direction: column;
             >span{
                 color: #FFFCF3;
@@ -17,12 +17,27 @@ section{
 
         }
         >.containerRight{
-        @include dpf ($g:42px);
-            
+            @include dpf ($g:16px);
+            flex-direction: column;
+         >.contentRight{
+            @include dpf ($g:42px);
+            }    
         }
     };
 }
 
+.legalnotice{
+    color: #FFFCF3;
+    text-decoration: none;
+    font-size: 1.25rem;
+    &:hover{
+        color: var(--highlight2-color);
+    }
+}
+
+.logo{
+  height: 48px;
+}
 .icon{
     height: 56px;
 }

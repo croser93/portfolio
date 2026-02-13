@@ -16,6 +16,9 @@ nav{
     height: 40px;
 
 }
+.logo{
+  height: 48px;
+}
 
 .languageBtn{
     @include dpf ($g: 16px);
