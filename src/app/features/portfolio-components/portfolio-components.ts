@@ -6,11 +6,12 @@ import { SkillsComponents } from './skills-components/skills-components';
 import { Header } from '../shared/components/header/header';
 import { ProjectsComponent } from './projects-component/projects-component';
 import { ReferencesComponents } from './references-components/references-components';
+import { Footer } from '../shared/components/footer/footer';
 
 
 @Component({
   selector: 'app-portfolio-components',
-  imports: [HeroComponents, AboutMeComponents, ContactComponents, SkillsComponents, ProjectsComponent ,ReferencesComponents ,Header],
+  imports: [HeroComponents, AboutMeComponents, ContactComponents, SkillsComponents, ProjectsComponent ,ReferencesComponents , Header, Footer],
   templateUrl: './portfolio-components.html',
   styleUrl: './portfolio-components.scss',
 })

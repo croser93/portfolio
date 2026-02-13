@@ -27,6 +27,9 @@
    padding: 0;
    box-sizing: border-box;
  }
+ html {
+  scroll-behavior: smooth;
+}
 
  body {
    font-family: "Overpass", sans-serif;
@@ -53,4 +56,8 @@
 .disabled{
   background-color: grey;
   cursor: default;
+}
+
+.bcBlack{
+  background-color: black;
 }
