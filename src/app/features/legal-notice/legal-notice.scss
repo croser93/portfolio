@@ -1,6 +1,6 @@
 @use '../../../styles/variables' as *;
 section{
-@include dpf ($ai: flex-start);
+@include dpf ($ai: flex-start, $g: 64px);
 width: 100%;
     padding:120px 200px;
      flex-direction: column;
@@ -20,14 +20,17 @@ span{
     @include dpf ($ai:flex-start);
     flex-direction: column;
     width: 100%;
-    padding: 24px 8px;
+    padding: 24px 0px;
+        >span{
+        font-size: 1.15rem;
+    }
+    
 }
 
 .content{
     display: flex;
         flex-direction: column;
         gap: 24px;
-
     >div{
         display: flex;
         flex-direction: column;
@@ -36,10 +39,14 @@ span{
 
 }
 
-.spanHighlight{
+a{
    color: var(--highlight2-color); 
    font-size: 1rem;
    font-weight: 500; 
+   text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
 }
 
 .indemnity{
