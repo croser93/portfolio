@@ -1,0 +1,70 @@
+@use '../../../styles/variables' as *;
+section{
+@include dpf ($ai: flex-start, $g: 64px);
+width: 100%;
+    padding:120px 200px;
+     flex-direction: column;
+     >h1{
+      
+    font-size: 4.875rem;
+    font-family: "Syne-ExtraBold";
+     }
+}
+
+span{
+    font-size: 1rem;
+
+}
+
+ul{
+    @include dpf ($ai:flex-start);
+    flex-direction: column;
+    width: 100%;
+    padding: 16px 32px;
+        >li{
+        font-size: 1.15rem;
+    }
+    
+}
+
+
+
+
+
+
+.content{
+    display: flex;
+        flex-direction: column;
+        gap: 24px;
+    >div{
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+}
+
+a{
+   color: var(--highlight2-color); 
+   font-size: 1rem;
+   font-weight: 500; 
+   text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.indemnity{
+    display: flex;
+    flex-direction: column;
+    gap: 24px; 
+}
+
+h2{font-size: 1.5rem;
+        color: var(--highlight2-color);
+}
+
+h3{
+font-size: 1.25rem;
+color: var(--highlight2-color);
+}
