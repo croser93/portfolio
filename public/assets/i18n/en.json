@@ -15,7 +15,9 @@
   },
   "SKILLS": {
     "TITLE": "MY SKILLS",
-    "DESCRIPTION": "I am currently retraining as a software developer and truly enjoy programming. I originally come from the automotive industry, where I especially liked troubleshooting and finding practical solutions. This structured way of thinking now helps me a lot in IT. I am learning new technologies step by step and enjoy continuously expanding my knowledge. If something doesn’t work right away, I stay persistent and keep working on it until I find a solution. I am highly motivated and look forward to growing both professionally and personally."
+    "DESCRIPTION-1": "Don't see the skill your need? ",
+    "DESCRIPTION-2": "I'm always ready to learn!",
+    "CONTACT": "Contact me"
 
   }
   
