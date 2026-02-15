@@ -1,0 +1,40 @@
+@use '../../../styles/variables' as *;
+section{
+@include dpf ($ai: flex-start, $g: 64px);
+width: 100%;
+    padding:120px 200px;
+     flex-direction: column;
+     >h1{
+      
+    font-size: 4.875rem;
+    font-family: "Syne-ExtraBold";
+     }
+}
+
+span{
+    font-size: 1rem;
+
+}
+
+
+
+.content{
+    display: flex;
+        flex-direction: column;
+        gap: 48px;
+    >div{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+}
+
+
+h2{font-size: 1.5rem;
+        color: var(--highlight2-color);
+}
+
+h3{
+font-size: 1.25rem;
+}
