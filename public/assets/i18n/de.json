@@ -1,3 +1,21 @@
 {
-    "slogang":"German Version"
+  "HEADER": {
+    "NAV": {
+      "ABOUT": "About me",
+      "SKILLS": "My Skills",
+      "PROJECTS": "My Projects"
+    }
+  },
+  "ABOUT_ME": {
+    "TITLE": "Über Mich",
+    "DESCRIPTION": "Ich mache aktuell eine Umschulung zum Softwareentwickler und habe große Freude am Programmieren. Ursprünglich komme ich aus der KFZ-Branche – am meisten Spaß hat mir dort die Fehlersuche und das Finden von Lösungen gemacht. Genau dieses strukturierte Denken hilft mir jetzt auch in der IT. Ich arbeite mich Schritt für Schritt in neue Technologien ein und lerne gerne ständig dazu. Wenn etwas nicht sofort klappt, bleibe ich dran und suche so lange, bis ich eine Lösung finde. Ich bin mit voller Motivation dabei und freue mich darauf, mich fachlich und persönlich weiterzuentwickeln.",
+    "LOCATION": "Ich Wohne in Lübeck / Krummesse",
+    "REMOTE": "Bin offen für remotes Arbeiten",
+    "BUTTON": "Lass uns darüber Reden"
+  },
+    "SKILLS": {
+    "TITLE": "Meine Fähigkeiten",
+    "DESCRIPTION": "I am currently retraining as a software developer and truly enjoy programming. I originally come from the automotive industry, where I especially liked troubleshooting and finding practical solutions. This structured way of thinking now helps me a lot in IT. I am learning new technologies step by step and enjoy continuously expanding my knowledge. If something doesn’t work right away, I stay persistent and keep working on it until I find a solution. I am highly motivated and look forward to growing both professionally and personally."
+
+  }
 }
