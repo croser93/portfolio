@@ -1,23 +1,30 @@
 {
-  "HEADER": {
-    "NAV": {
-      "ABOUT": "About me",
-      "SKILLS": "My Skills",
-      "PROJECTS": "My Projects"
-    }
-  },
-  "ABOUT_ME": {
-    "TITLE": "Über Mich",
-    "DESCRIPTION": "Ich mache aktuell eine Umschulung zum Softwareentwickler und habe große Freude am Programmieren. Ursprünglich komme ich aus der KFZ-Branche – am meisten Spaß hat mir dort die Fehlersuche und das Finden von Lösungen gemacht. Genau dieses strukturierte Denken hilft mir jetzt auch in der IT. Ich arbeite mich Schritt für Schritt in neue Technologien ein und lerne gerne ständig dazu. Wenn etwas nicht sofort klappt, bleibe ich dran und suche so lange, bis ich eine Lösung finde. Ich bin mit voller Motivation dabei und freue mich darauf, mich fachlich und persönlich weiterzuentwickeln.",
-    "LOCATION": "Ich Wohne in Lübeck / Krummesse",
-    "REMOTE": "Bin offen für remotes Arbeiten",
-    "BUTTON": "Lass uns darüber Reden"
-  },
+    "HEADER": {
+        "NAV": {
+        "ABOUT": "About me",
+        "SKILLS": "My Skills",
+        "PROJECTS": "My Projects"
+        }
+    },
+    "ABOUT_ME": {
+        "TITLE": "Über Mich",
+        "DESCRIPTION": "Ich mache aktuell eine Umschulung zum Softwareentwickler und habe große Freude am Programmieren. Ursprünglich komme ich aus der KFZ-Branche – am meisten Spaß hat mir dort die Fehlersuche und das Finden von Lösungen gemacht. Genau dieses strukturierte Denken hilft mir jetzt auch in der IT. Ich arbeite mich Schritt für Schritt in neue Technologien ein und lerne gerne ständig dazu. Wenn etwas nicht sofort klappt, bleibe ich dran und suche so lange, bis ich eine Lösung finde. Ich bin mit voller Motivation dabei und freue mich darauf, mich fachlich und persönlich weiterzuentwickeln.",
+        "LOCATION": "Ich Wohne in Lübeck / Krummesse",
+        "REMOTE": "Bin offen für remotes Arbeiten",
+        "BUTTON": "Lass uns darüber Reden"
+    },
     "SKILLS": {
-    "TITLE": "Meine Fähigkeiten",
-    "DESCRIPTION-1": "Fähigkeit nicht dabei? ",
-    "DESCRIPTION-2": "Bin immer offen für neues",
-    "CONTACT": "Kontaktiere mich"
+        "TITLE": "Meine Fähigkeiten",
+        "DESCRIPTION-1": "Fähigkeit nicht dabei? ",
+        "DESCRIPTION-2": "bin immer offen für neues.",
+        "CONTACT": "Kontaktiere mich"
+    },
+    "PORTFOLIO": {
+    "TITLE": "Projekte",
+    "DESCRIPTION": "Hier finden Sie eine Auswahl meiner Projekte um meine Fähigkeiten in der Praxis zu erleben.",
+    "1":"Ein moderner Aufgabenmanager nach dem Kanban-Prinzip. Erstellen Sie Aufgaben, priorisieren Sie diese ganz einfach per Drag & Drop und verwalten Sie zusätzliche Benutzer sowie individuelle Kategorien übersichtlich an einem Ort.",
+    "2":"Ein simples Jump-and-Run-Spiel mit objektorientierter Grafik. Helfe Elvoron, Münzen und Energie zu sammeln, um gegen den Höllenkönig zu kämpfen.",
+    "3":"Basierend auf der PokéAPI ist dies eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert."
+    }
 
-  }
 }

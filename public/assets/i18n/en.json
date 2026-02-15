@@ -19,6 +19,14 @@
     "DESCRIPTION-2": "I'm always ready to learn!",
     "CONTACT": "Contact me"
 
-  }
-  
+  },
+    "PORTFOLIO": {
+    "TITLE": "Portfolio",
+    "DESCRIPTION": "Explore a selection of my work here - Interact with projects to see my skills in action",
+    "1":"Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+    "2":"A simple Jump-and-Run game based on object-oriented approach. Help Elvoron to find coins and mana to fight against the Hellknight.",
+    "3":"Based on the PokéAPI a simple libary hat provides and catalogues pokemon information."
+
+    }
+
 }
