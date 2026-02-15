@@ -26,7 +26,14 @@
     "1":"Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
     "2":"A simple Jump-and-Run game based on object-oriented approach. Help Elvoron to find coins and mana to fight against the Hellknight.",
     "3":"Based on the PokéAPI a simple libary hat provides and catalogues pokemon information."
+    },
 
+    "REFERENCES": {
+    "TITLE": "References",
+    "DESCRIPTION": "I thrive both independently and as part of a team. Here's what my colleagues have to say about working with me..",
+    "1":"Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+    "2":"Michi was a top team colleague at DA. His positive commitment and willingness to take on responsibility made a significant contribution to us achieving our goals.",
+    "3":"It was a great pleasure to work with Michael. He knows how to push and encourage team members to present the best work possible, always adding something to brainstorm. Regarding the well-being of group members, he was always present and available to listen and help others, with a great sense of humor as well."
     }
 
 }
