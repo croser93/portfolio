@@ -1,23 +1,20 @@
 <section>
     <div class="containerLeft">
-        <h2>About Me</h2>
+        <h2>{{ 'ABOUT_ME.TITLE' | translate }}</h2>
         <span>
-            Write some information about yourself that is IT related. Why are you passionate about 
-            coding? Show a desire to learn new Technologies. Add a brief description of your problem-solving 
-            approach. You can unclude some key traits like: analytical thinking, creativity, persistence and 
-            collaborate.
+            {{ 'ABOUT_ME.DESCRIPTION' | translate }}
         </span>
         <div class="infoItem">
             <div>
                 <img src="assets/icon/house.svg" alt="Home-Icon">
-                <span>Based in Lübeck</span>
+                <span>{{ 'ABOUT_ME.LOCATION' | translate }}</span>
             </div>
             <div>
                 <img src="assets/icon/laptop_chromebook.svg" alt="Laptop-Icon">
-                <span>Open to work Remote</span>
+                <span>{{ 'ABOUT_ME.REMOTE' | translate }}</span>
             </div>
         </div>
-        <button>Lets's Talk</button>
+        <button>{{ 'ABOUT_ME.BUTTON' | translate }}</button>
     </div>
 
     <div class="imgContainer">

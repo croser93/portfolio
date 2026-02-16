@@ -1,6 +1,6 @@
 <section>
-    <h2>References</h2>
-    <span>I thrive both independently and as part of a team. Here's what my colleagues have to say about working with me.</span>
+    <h2>{{ 'REFERENCES.TITLE' | translate }}</h2>
+    <span>{{ 'REFERENCES.DESCRIPTION' | translate }}</span>
 
     <div class="refContainer">
         @for (comment of humanComments; track comment.id; let i = $index) {
@@ -10,7 +10,7 @@
                 <h4>{{ comment.name }}</h4>
                 <span> {{comment.job}} </span>
             </div>
-            <p> {{comment.description}} </p>
+            <p> {{comment.description | translate }} </p>
         </div>
     }
     </div>

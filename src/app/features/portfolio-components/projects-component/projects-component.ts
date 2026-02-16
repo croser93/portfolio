@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 interface projects {
       id: number
@@ -12,7 +13,7 @@ interface projects {
 
 @Component({
   selector: 'app-projects-component',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './projects-component.html',
   styleUrl: './projects-component.scss',
 })
@@ -24,7 +25,7 @@ export class ProjectsComponent {
       titleId: '01',
       title: 'Join',
       codeBase: 'HTML | CSS | Firebase | Javascript',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      description: 'PORTFOLIO.1',
       img: 'assets/img/projects/Join.jpg',
       github: 'https://github.com/croser93/Join_Kanban_Manager.git'
     },
@@ -33,7 +34,7 @@ export class ProjectsComponent {
       titleId: '02',
       title: 'Hellgate Shadowfall',
       codeBase: 'HTML | CSS | Javascript',
-      description: 'A simple Jump-and-Run game based on object-oriented approach. Help Elvoron to find coins and mana to fight against the Hellknight.',
+      description: 'PORTFOLIO.2',
       img: 'assets/img/projects/HellgateShadowfall.jpg',
       github: 'https://github.com/croser93/2d-Game.git'
     },
@@ -42,7 +43,7 @@ export class ProjectsComponent {
       titleId: '03',
       title: 'Pokédex',
       codeBase: 'HTML | CSS | Javascript | Api',
-      description: 'Based on the PokéAPI a simple libary hat provides and catalogues pokemon information-.',
+      description: 'PORTFOLIO.3',
       img: 'assets/img/projects/pokedex.jpg',
       github: 'https://github.com/croser93/Pokedex.git'
     }
