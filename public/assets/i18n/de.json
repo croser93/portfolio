@@ -1,9 +1,9 @@
 {
     "HEADER": {
         "NAV": {
-        "ABOUT": "About me",
-        "SKILLS": "My Skills",
-        "PROJECTS": "My Projects"
+        "ABOUT": "Über Mich",
+        "SKILLS": "Meine Fähigkeiten",
+        "PROJECTS": "Meine Projekte"
         }
     },
     "ABOUT_ME": {
@@ -49,6 +49,10 @@
     "ERR_EMAIL":"Bitte gib eine E-mail ein",
     "ERR_MESSAGE":"Bitte gib eine Nachricht ein",
     "ERR_PRIVACY_POLICY":"Sie müssen die Datenschutzbestimmungen akzeptieren, bevor Sie die Nachricht absenden können."
+    },
+
+    "LEGALNOTICE":{
+        "LEGALNOTICE":"Impressum"
 
     }
 }

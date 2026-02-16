@@ -52,6 +52,10 @@
     "ERR_EMAIL":"please enter a email",
     "ERR_MESSAGE":"please enter a message",
     "ERR_PRIVACY_POLICY":"You need to accept the privacy policy before submitting."
+    },
+
+    "LEGALNOTICE":{
+        "LEGALNOTICE":"LegalNotice"
 
     }
 }
