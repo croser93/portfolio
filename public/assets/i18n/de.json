@@ -32,6 +32,23 @@
     "1":"#.",
     "2":"#",
     "3":"#"
-    }
+    },
 
+    "CONTACT": {
+    "TITLE": "Sag Hallo",
+    "DESCRIPTION": "Möchten Sie ein neues Projekt besprechen?",
+    "DESCRIPTION_TEXT": "Sag hallo! Lass uns über deine Ideen sprechen und sie verwirklichen.",
+    "NAME":"dein Name",
+    "EMAIL":"deine Email",
+    "MESSAGE": "deine Nachricht",
+    "PRIVACY_POLICY_TEXT_1":"Ich habe die ",
+    "PRIVACY_POLICY_TEXT_2":"gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+    "PRIVACY_POLICY":"Datenschutzerklärung",
+    "BUTTON":"Sende Nachricht",
+    "ERR_NAME":"Bitte gib einen Namen ein",
+    "ERR_EMAIL":"Bitte gib eine E-mail ein",
+    "ERR_MESSAGE":"Bitte gib eine Nachricht ein",
+    "ERR_PRIVACY_POLICY":"Sie müssen die Datenschutzbestimmungen akzeptieren, bevor Sie die Nachricht absenden können."
+
+    }
 }

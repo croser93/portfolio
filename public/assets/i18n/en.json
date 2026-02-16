@@ -30,10 +30,28 @@
 
     "REFERENCES": {
     "TITLE": "References",
-    "DESCRIPTION": "I thrive both independently and as part of a team. Here's what my colleagues have to say about working with me..",
+    "DESCRIPTION": "I thrive both independently and as part of a team. Here's what my colleagues have to say about working with me.",
     "1":"Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
     "2":"Michi was a top team colleague at DA. His positive commitment and willingness to take on responsibility made a significant contribution to us achieving our goals.",
     "3":"It was a great pleasure to work with Michael. He knows how to push and encourage team members to present the best work possible, always adding something to brainstorm. Regarding the well-being of group members, he was always present and available to listen and help others, with a great sense of humor as well."
-    }
+    },
 
+    
+    "CONTACT": {
+    "TITLE": "Say Hi!",
+    "DESCRIPTION": "Want to discuss a new project?",
+    "DESCRIPTION_TEXT": "say hello! let's discuss your ideas and make it happen.",
+    "NAME":"Your name",
+    "EMAIL":"Your email",
+    "MESSAGE": "your message",
+    "PRIVACY_POLICY":"privacy policy",
+    "PRIVACY_POLICY_TEXT_1":"I've read the",
+    "PRIVACY_POLICY_TEXT_2":"and agree to the processing of my data as outlined.",
+    "BUTTON":"Send message",
+    "ERR_NAME":"please enter a name",
+    "ERR_EMAIL":"please enter a email",
+    "ERR_MESSAGE":"please enter a message",
+    "ERR_PRIVACY_POLICY":"You need to accept the privacy policy before submitting."
+
+    }
 }
