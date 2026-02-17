@@ -10,4 +10,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 })
 export class Footer {
 
+  scrollTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }

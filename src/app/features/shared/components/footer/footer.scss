@@ -1,6 +1,7 @@
 @use '../../../../../styles/variables' as *;
 
 section{
+  background-color: black;
     @include dpf ();
     width: 100%;
     >.content {
