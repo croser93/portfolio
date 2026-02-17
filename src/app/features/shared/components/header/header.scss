@@ -68,7 +68,7 @@ button{
 
 .menu{
     position: absolute;
-    margin-top: 80px;
+    margin-top: 160px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
@@ -77,38 +77,8 @@ button{
     background-color: var(--bg-color) ;
     height: 600px;
     transition: max-height 1s ease;
-    >a {
-  position: relative;
-  text-decoration: none;
-  color: black;
-  font-family: Syne-Bold;
-  font-size: 6rem;
-  font-weight: 700;
-        &:hover{
-            &::before {
-                content: '';
-                position: absolute;
-                left: -24px;
-                top: 32px;
-                width: 4px;
-                height: 0;
-                background-color: black;
-                animation: drawVertical 0.3s forwards;
-            }
-            &::after {
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                height: 6px;
-                width: 0;           
-                background-color: black;
-                animation: drawHorizontal 0.8s 0.2s forwards;
-            }
-        }
+  }
 
-
-    }}
     @keyframes drawVertical {
       0% {
         height: 0;
@@ -167,4 +137,66 @@ input[type]:checked ~ span.bot {
 input[type]:checked ~ span.mid {
   transform: translateX(-20px);
   opacity: 0;
+}
+
+
+h2{
+  color: var(--bg-color);
+}
+
+
+.menuFooter{
+  background-color: black;
+  width: 100%;
+  height: auto;
+  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+  @include dpf(); 
+
+}
+
+.menuHeader{
+  @include dpf-col ($g: 16px); 
+  height: calc((100vh - 64px) / 2 );
+
+  >a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  font-family: Syne-Bold;
+  font-size: 6rem;
+  font-weight: 700;
+        &:hover{
+            &::before {
+                content: '';
+                position: absolute;
+                left: -24px;
+                top: 32px;
+                width: 4px;
+                height: 0;
+                background-color: black;
+                animation: drawVertical 0.3s forwards;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 6px;
+                width: 0;           
+                background-color: black;
+                animation: drawHorizontal 0.8s 0.2s forwards;
+            }
+        }
+
+}}
+
+.menuContainer{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.menuFooterContainer{
+ @include dpf();
+ height: calc((100vh - 64px) / 2 );
 }

@@ -19,9 +19,24 @@
 </header>
 
 <div id="menuBar" [class.dnone]="!isMenuOpen">
-    <div class="menu content-beg">
-        <a (click)="toggleMenuBar()" href="#aboutMe">{{ 'HEADER.NAV.ABOUT' | translate }}</a>
-        <a (click)="toggleMenuBar()" href="#skills">{{ 'HEADER.NAV.SKILLS' | translate }}</a>
-        <a (click)="toggleMenuBar()" href="#portfolio">{{ 'HEADER.NAV.PROJECTS' | translate }}</a>
+    <div class="menuContainer menu">
+        <div class="menuHeader content-beg">
+            <a (click)="toggleMenuBar()" href="#aboutMe">{{ 'HEADER.NAV.ABOUT' | translate }}</a>
+            <a (click)="toggleMenuBar()" href="#skills">{{ 'HEADER.NAV.SKILLS' | translate }}</a>
+            <a (click)="toggleMenuBar()" href="#portfolio">{{ 'HEADER.NAV.PROJECTS' | translate }}</a>
+        </div>
+        <div class="menuFooter">
+            <div class="menuFooterContainer content-beg">
+                <div>
+                    <h2>Say Hi</h2>
+                    <a target="__blank" href="mailto:contact@maik-groth.com">contact@maik-groth.com</a>
+                </div>
+                <div>
+                    <a class="link bob-on-hover" target="__blank" href="https://github.com/croser93/portfolio"><img class="icon" src="assets/icon/git.svg" alt="gitIcon"></a>
+                    <a class="link bob-on-hover" target="__blank" href="mailto:contact@maik-groth.com"><img class="icon" src="assets/icon/mail.svg" alt="mailIcon"></a>
+                    <a class="link bob-on-hover" target="__blank" href="https://www.linkedin.com/in/maik-groth"><img class="icon" src="assets/icon/indeed.svg" alt="indeedIcon"></a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
