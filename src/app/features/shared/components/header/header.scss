@@ -72,11 +72,9 @@ button{
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
-    @include dpf ();
-    flex-direction: column;
+    @include dpf-col ($g: 16px); 
     width: 100%;
     background-color: var(--bg-color) ;
-    gap: 32px;
     height: 600px;
     transition: max-height 1s ease;
     >a {
@@ -133,11 +131,7 @@ button{
 }
 
 .menuButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 7px;
+  @include dpf-col ($g: 7px); 
   color: #090909;
   width: 3.5em;
   height: 3.5em;

@@ -7,18 +7,15 @@ section{
         @include dpf ($jc: space-between);
         padding: 24px 8px;
         >.containerLeft{
-            @include dpf ($g:16px);
-            flex-direction: column;
+            @include dpf-col ($g: 16px); 
             >span{
                 color: #FFFCF3;
                 font-size: 1.375rem;
                 font-weight: 400;
             }
-
         }
         >.containerRight{
-            @include dpf ($g:16px);
-            flex-direction: column;
+          @include dpf-col ($g: 16px); 
          >.contentRight{
             @include dpf ($g:42px);
             }    

@@ -75,3 +75,13 @@
             width: 260px;
         }   
 }
+
+h2{
+    font-size: 4.875rem;
+    font-family: Syne-ExtraBold;
+    text-wrap-mode: nowrap;
+        &:hover{
+            color: var(--highlight2-color);
+            cursor: default;
+        }
+}

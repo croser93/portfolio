@@ -1,41 +1,32 @@
+@use '../../../../styles/variables' as *;
 section{
     height: 100vh;
     position: relative;
     display: flex;
     justify-content: center;
     >.hero{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    @include dpf-col();
         width: 1240px;
-        height: 560px;
     }
 }
 
 h1 {
     font-size: 8rem;
     font-family: "Syne-ExtraBold";
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    @include dpf-col();
     line-height: 104px;
 
 }
-h2{
+h4{
     font-size: 48px;
     font-family: "Overpass";
     color: var(--highlight2-color);
     font-weight: bolder;
-    text-wrap: nowrap;
-    
+    text-wrap: nowrap;  
 }
 
 .name{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include dpf();
     max-width: 1100px;
     width: 100%;
     gap: 16px;

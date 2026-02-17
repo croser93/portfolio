@@ -1,11 +1,9 @@
 @use '../../../../styles/variables' as *;
 section{
-    @include dpf ();
-    flex-direction: column;
+    @include dpf-col();
     margin-top: 120px;
     >.headerProjektComponent {
-         @include dpf ();
-        flex-direction: column;
+        @include dpf-col();
         gap: 20px;
         >span{
         font-family: Overpass;
@@ -14,16 +12,6 @@ section{
         max-width: 500px;
         text-align: center;
         }
-    }
-}
-
-h2 {
-    font-size: 4.875rem;
-    font-family: Syne-ExtraBold;
-
-    &:hover {
-        color: var(--highlight2-color);
-        cursor: default;
     }
 }
 
@@ -51,17 +39,13 @@ img{
 }
 
 .containerRight{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: end;
+    @include dpf-col($jc: flex-start, $ai: flex-end);
 
 }
 .projectsInfo{
     width: 700px;
     >.projectsInfoText{
-        @include dpf ($ai: flex-start);
-        flex-direction: column;
+        @include dpf-col($ai: flex-start);
         padding: 48px 0px;
         max-width: 540px;
         gap: 16px;
