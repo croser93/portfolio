@@ -5,6 +5,7 @@ import { Header } from './features/shared/components/header/header';
 import { Footer } from './features/shared/components/footer/footer';
 
 
+
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, RouterLink, TranslatePipe, TranslateDirective, Header, Footer],
