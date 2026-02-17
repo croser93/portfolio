@@ -1,14 +1,8 @@
 @use '../../../styles/variables' as *;
 section{
-@include dpf ($ai: flex-start, $g: 64px);
-width: 100%;
+    @include dpf-col($ai: flex-start, $g: 64px);
+    width: 100%;
     padding:120px 200px;
-     flex-direction: column;
-     >h1{
-      
-    font-size: 4.875rem;
-    font-family: "Syne-ExtraBold";
-     }
 }
 
 span{
@@ -17,8 +11,7 @@ span{
 }
 
 ul{
-    @include dpf ($ai:flex-start);
-    flex-direction: column;
+    @include dpf-col($ai:flex-start);
     width: 100%;
     padding: 16px 32px;
         >li{
@@ -26,11 +19,6 @@ ul{
     }
     
 }
-
-
-
-
-
 
 .content{
     display: flex;
@@ -60,11 +48,6 @@ a{
     gap: 24px; 
 }
 
-h2{font-size: 1.5rem;
-        color: var(--highlight2-color);
-}
-
-h3{
+h4{
 font-size: 1.25rem;
-color: var(--highlight2-color);
 }
