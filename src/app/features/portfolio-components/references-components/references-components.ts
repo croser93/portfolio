@@ -18,13 +18,13 @@ export class ReferencesComponents {
   humanComments: comment[] = [
     {
       id: 1,
-      name: 'V. Schuster',
+      name: 'Lucas Graf',
       job: 'Team Partner',
       description: 'REFERENCES.1',
     },
         {
       id: 2,
-      name: 'V. Schuster',
+      name: 'Leon G Leuning',
       job: 'Team Partner',
       description: 'REFERENCES.2',
     },

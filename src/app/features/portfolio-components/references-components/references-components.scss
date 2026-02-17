@@ -27,8 +27,8 @@ h2 {
      @include dpf ($jc:space-between);
      width: 100%;
      >div{
-        @include dpf ($g:24px);
-        padding: 24px;
+        @include dpf ($g:16px);
+        padding: 16px;
         flex-direction: column;
         max-width: 480px;
         border: 4px black solid;
@@ -44,9 +44,9 @@ h2 {
                 font-size: 1rem;
             }
         }
-    >p{font-size: 1.25rem;
+    >p{font-size: 1.2rem;
         font-weight: 400;
-        height: 200px;
+        height: 220px;
     }
      }
 
