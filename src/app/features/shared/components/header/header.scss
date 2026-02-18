@@ -68,14 +68,12 @@ button{
 
 .menu{
     position: absolute;
-    margin-top: 160px;
+    margin-top: 64px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
     @include dpf-col ($g: 16px); 
-    width: 100%;
     background-color: var(--bg-color) ;
-    height: 600px;
     transition: max-height 1s ease;
   }
 
@@ -119,7 +117,7 @@ input {
 .menuButton span {
   width: 30px;
   height: 4px;
-  background: #131313;
+  background: black;
   border-radius: 100px;
   transition: 0.3s ease;
 }
@@ -142,16 +140,6 @@ input[type]:checked ~ span.mid {
 
 h2{
   color: var(--bg-color);
-}
-
-
-.menuFooter{
-  background-color: black;
-  width: 100%;
-  height: auto;
-  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
-  @include dpf(); 
-
 }
 
 .menuHeader{
@@ -191,12 +179,39 @@ h2{
 }}
 
 .menuContainer{
-  display: flex;
   flex-direction: column;
+  width: 100%;
+  justify-content: space-between
 
 }
 
-.menuFooterContainer{
- @include dpf();
- height: calc((100vh - 64px) / 2 );
+
+.menuFooter{
+  background-color: black;
+  width: 100%;
+  height: auto;
+  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+  height: calc((100vh - 64px) / 2 );
+  @include dpf(); 
+  >.menuFooterContainer{
+    @include dpf($jc: space-between, $ai:flex-end);
+    >.menuFooterRight{
+      @include dpf($g:24px);
+    }
+    >.menuFooterLeft{
+      @include dpf-col ($ai:flex-start,$g: 16px); 
+      >a{
+          text-decoration: none;
+          font-size: 22px;
+          font-family: "Overpass";
+          text-decoration: none;
+          color: var(--bg-color);
+          white-space: nowrap;
+            >h2:hover{
+              color:var(--highlight2-color)
+            
+          }
+        }
+    }
+  }
 }
