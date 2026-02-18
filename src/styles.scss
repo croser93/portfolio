@@ -37,7 +37,7 @@
  }
 
  .border{
-    margin: 0px 100px;
+  padding: 0px 24px;
  }
 
  .content-beg{
@@ -95,7 +95,8 @@ h2{
     -webkit-transform: translateY(-8px);
     transform: translateY(-8px);
     }
-    }
+}
+
 @keyframes bob-on-hover {
   0% {
     -webkit-transform: translateY(-8px);
