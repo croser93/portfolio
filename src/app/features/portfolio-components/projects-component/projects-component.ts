@@ -4,13 +4,13 @@ import { trigger, transition, style, animate } from '@angular/animations';
 
 
 interface projects {
-      id: number
-      titleId: string
-      title: string
-      codeBase: string
-      description: string
-      img: string
-      github: string
+  id: number
+  titleId: string
+  title: string
+  codeBase: string
+  description: string
+  img: string
+  github: string
 }
 
 @Component({
@@ -19,23 +19,24 @@ interface projects {
   templateUrl: './projects-component.html',
   styleUrl: './projects-component.scss',
   animations: [
-  trigger('fadeAnimation', [
-    transition(':enter', [
-      style({ opacity: 0, transform: 'translateX(20px)' }), // Startet leicht versetzt
-      animate('400ms ease-out', style({ opacity: 1, transform: 'translateX(0)' }))
-    ]),
-    transition(':leave', [
-      animate('300ms ease-in', style({ opacity: 0, transform: 'translateX(20px)' }))
+    trigger('fadeAnimation', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'translateX({{ startX }})' }),
+        animate('400ms ease-out', style({ opacity: 1, transform: 'translateX(0)' }))
+      ], { params: { startX: '150px' } }),
+      transition(':leave', [
+        animate('300ms ease-in', style({ opacity: 0, transform: 'translateX({{ startX }})' }))
+      ], { params: { startX: '150px' } })
     ])
-  ])
-]
+  ]
+
 })
 export class ProjectsComponent {
 
   hoveredProjectId: number | null = null;
 
 
-    projects: projects[] = [
+  projects: projects[] = [
     {
       id: 1,
       titleId: '01',
@@ -54,7 +55,7 @@ export class ProjectsComponent {
       img: 'assets/img/projects/HellgateShadowfall.jpg',
       github: 'https://github.com/croser93/2d-Game.git'
     },
-     {
+    {
       id: 3,
       titleId: '03',
       title: 'Pokédex',
