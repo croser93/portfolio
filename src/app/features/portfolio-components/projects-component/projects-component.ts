@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component, inject } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 import { trigger, transition, style, animate } from '@angular/animations';
 
@@ -25,7 +25,7 @@ interface projects {
         animate('400ms ease-out', style({ opacity: 1, transform: 'translateX(0)' }))
       ], { params: { startX: '150px' } }),
       transition(':leave', [
-        animate('300ms ease-in', style({ opacity: 0, transform: 'translateX({{ startX }})' }))
+        animate('600ms ease-in', style({ opacity: 0, transform: 'translateX({{ startX }})' }))
       ], { params: { startX: '150px' } })
     ])
   ]
@@ -33,8 +33,31 @@ interface projects {
 })
 export class ProjectsComponent {
 
-  hoveredProjectId: number | null = null;
+  private cdr = inject(ChangeDetectorRef);
+  visibleProjects = new Map<number, boolean>();
+  private hideTimers = new Map<number, ReturnType<typeof setTimeout>>();
 
+  isVisible(id: number): boolean {
+    return this.visibleProjects.get(id) ?? false;
+  }
+
+  onMouseEnter(id: number): void {
+    const existing = this.hideTimers.get(id);
+    if (existing) {
+      clearTimeout(existing);
+      this.hideTimers.delete(id);
+    }
+    this.visibleProjects.set(id, true);
+  }
+
+  onMouseLeave(id: number): void {
+    const timer = setTimeout(() => {
+      this.visibleProjects.set(id, false);
+      this.hideTimers.delete(id);
+      this.cdr.markForCheck();
+    }, 5000);
+    this.hideTimers.set(id, timer);
+  }
 
   projects: projects[] = [
     {

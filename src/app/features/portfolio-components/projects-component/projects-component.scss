@@ -50,12 +50,13 @@ img{
         max-width: 540px;
         gap: 16px;
         >h3{
-            font-size: 4rem;
+            font-size: 3rem;
             font-family: Syne-ExtraBold;
+            text-wrap-mode: nowrap;
         }
         >span{
            font-family: Overpass;
-           font-size: 2rem;
+           font-size: 1.8rem;
            color: var(--highlight2-color);
            font-weight: 600;
         }
