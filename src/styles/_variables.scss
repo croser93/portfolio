@@ -13,3 +13,11 @@
     align-items: $ai;
     gap: $g;
 }
+
+@mixin dpf-col($jc: center, $ai: center,  $g: 0){
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    gap: $g;
+    flex-direction: column;
+}

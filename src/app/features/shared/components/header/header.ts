@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core'; 
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -10,16 +10,16 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 export class Header {
   activeLanguage: 'en' | 'de' = 'en';
   isMenuOpen = false;
- 
-    private translate = inject(TranslateService); 
-    toggleLanguage(lang: 'en' | 'de') {
+
+  private translate = inject(TranslateService);
+  toggleLanguage(lang: 'en' | 'de') {
     this.activeLanguage = lang;
-    this.translate.use(lang); 
+    this.translate.use(lang);
   }
 
-  toggleMenuBar(){
-  this.isMenuOpen = !this.isMenuOpen;
-
+  toggleMenuBar() {
+    this.isMenuOpen = !this.isMenuOpen;
+    document.body.style.overflow = this.isMenuOpen ? 'hidden' : '';
   }
 
 }

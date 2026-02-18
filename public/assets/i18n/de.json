@@ -12,7 +12,7 @@
         "DESCRIPTION": "Ich mache aktuell eine Umschulung zum Softwareentwickler und habe große Freude am Programmieren. Ursprünglich komme ich aus der KFZ-Branche – am meisten Spaß hat mir dort die Fehlersuche und das Finden von Lösungen gemacht. Genau dieses strukturierte Denken hilft mir jetzt auch in der IT. Ich arbeite mich Schritt für Schritt in neue Technologien ein und lerne gerne ständig dazu. Wenn etwas nicht sofort klappt, bleibe ich dran und suche so lange, bis ich eine Lösung finde. Ich bin mit voller Motivation dabei und freue mich darauf, mich fachlich und persönlich weiterzuentwickeln.",
         "LOCATION": "Ich Wohne in Lübeck / Krummesse",
         "REMOTE": "Bin offen für remotes Arbeiten",
-        "BUTTON": "Lass uns darüber Reden"
+        "BUTTON": "Lass uns Schreiben"
     },
 
     "SKILLS": {
@@ -33,9 +33,9 @@
     "REFERENCES": {
         "TITLE": "Referrenzen",
         "DESCRIPTION": "Ich arbeite sowohl eigenständig als auch im Team sehr zuverlässig und strukturiert. Hier ein paar Eindrücke von Kolleginnen und Kollegen zur Zusammenarbeit mit mir.",
-        "1":"#.",
-        "2":"#",
-        "3":"#"
+        "1":"Maik ist ein sehr leidenschaftlicher und motiviert Entwickler. Seine Arbeitsmoral und Engagement waren über die gesamte Projektlaufzeit sehr bemerkenswert. Die Aufgaben die Maik übernahm wurden sehr sorgfältig und stets zuverlässig bearbeitet. Zudem ist er ein Teamplayer, der ein gutes Arbeitsklima erschaffen und anderen mit Lösungsvorschlägen bei Problemen geholfen hat. Ein Bereicherung für jedes Dev-Team.",
+        "2":"Die Arbeit mit dir war sehr gut. Du arbeitest zuverlässig, fleißig und bist ein echter Teamplayer. Besonders dein starkes CSS-Verständnis ist aufgefallen, vor allem bei der erfolgreichen Lösung eines kniffligen Fehlers. Dein Code war stets sauber und gut strukturiert, sodass man sich schnell einarbeiten konnte. Außerdem hast du durch deine positive Art zur Produktivität und einer guten Teamatmosphäre beigetragen.",
+        "3":"It was a great pleasure to work with Michael. He knows how to push and encourage team members to present the best work possible, always adding something to brainstorm. Regarding the well-being of group members, he was always present and available to listen and help others, with a great sense of humor as well."
     },
 
     "CONTACT": {

@@ -1,19 +1,20 @@
-<section>
+<section [class.footerPolygon]="isSubRoute()">
     <div class="content content-beg">
         <div class="containerLeft">
-            <a href="#hero">
-                <img class="logo" src="assets/img/projects/logo_light.svg" alt="mgLogo">
+            <a href="#home">
+                <img class="logo" src="/assets/icon/logo_light.svg" alt="mgLogo">
             </a>
             <span>© Maik Groth 2026</span>
         </div>
         <div class="containerRight">
             <div class="contentRight">
-                <a class="link bob-on-hover" href="https://github.com/croser93/portfolio"><img class="icon" src="assets/icon/git.svg" alt="gitIcon"></a>
+                <a class="link bob-on-hover" target="__blank" href="https://github.com/croser93/portfolio"><img class="icon" src="assets/icon/git.svg" alt="gitIcon"></a>
                 <a class="link bob-on-hover" href="mailto:contact@maik-groth.com"><img class="icon" src="assets/icon/mail.svg" alt="mailIcon"></a>
-                <a class="link bob-on-hover" href="www.linkedin.com/in/maik-groth"><img class="icon" src="assets/icon/indeed.svg" alt="indeedIcon"></a>
+                <a class="link bob-on-hover" target="__blank" href="https://www.linkedin.com/in/maik-groth"><img class="icon" src="assets/icon/indeed.svg" alt="indeedIcon"></a>
             </div>
             <div>
-                <a class="legalnotice" routerLink="legal-notice">{{ 'LEGALNOTICE.LEGALNOTICE' | translate }}</a>
+                <a class="legalnotice" (click)="scrollTop()" routerLink="legal-notice">{{ 'LEGALNOTICE.LEGALNOTICE' |
+                    translate }}</a>
             </div>
         </div>
     </div>

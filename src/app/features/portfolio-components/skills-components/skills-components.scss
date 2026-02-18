@@ -46,15 +46,9 @@ section {
     }   
 }
 
-h2 {
+.h2Container {
     position: absolute;
     top: -54px;
     background-color: var(--bg-color); 
     padding: 0 24px;    
-    font-size: 4.875rem;
-    font-family: Syne-ExtraBold;
-    &:hover {
-        color: var(--highlight2-color);
-        cursor: default;
-    }
 }

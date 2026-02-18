@@ -10,15 +10,12 @@ span{
 }
 
 .containerLeft{
-    // border: solid black 1px;
-     @include dpf ($g: 48px);
-     flex-direction: column;
+    @include dpf-col($g: 48px);
      max-width: 670px;
      padding:24px;
      
     >.infoItem{
-       @include dpf ($ai:flex-start, $g: 16px); 
-       flex-direction: column;
+       @include dpf-col($ai:flex-start, $g: 16px);;
        text-align: center;
        width: 100%;
         >div{
@@ -27,31 +24,6 @@ span{
 
         }
     }
-}
-
-button{
-    min-width: 220px;
-    padding: 12px 8px;
-    border: 4px solid black;
-    cursor: pointer;
-    background-color: var(--bg-color);
-    transition: width 0.2s ease, font-weight 0.2s ease;
-    text-wrap-mode: nowrap;
-        &:hover{
-            font-weight: bolder;
-            width: 260px;;
-
-        }   
-}
-
-h2{
-    font-size: 4.875rem;
-    font-family: Syne-ExtraBold;
-    text-wrap-mode: nowrap;
-        &:hover{
-            color: var(--highlight2-color);
-            cursor: default;
-        }
 }
 
 .imgContainer{

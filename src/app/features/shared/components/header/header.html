@@ -1,26 +1,42 @@
-<section>
-    <div>
-        <img class="logo" src="assets/img/projects/logo_dark.svg" alt="mgLogo">
+<header class="header-wrapper">
+    <div class="header-content content-beg">
+        <img class="logo" src="/assets/icon/logo_dark.svg" alt="mgLogo">
+        
+        <nav>
+            <div class="languageBtn">
+                <button (click)="toggleLanguage('en')" [class.active]="activeLanguage === 'en'"><span>EN</span></button>
+                <button (click)="toggleLanguage('de')" [class.active]="activeLanguage === 'de'"><span>DE</span></button>
+            </div>
+            
+            <label class="menuButton">
+                <input type="checkbox" [checked]="isMenuOpen" (change)="toggleMenuBar()">
+                <span class="top"></span>
+                <span class="mid"></span>
+                <span class="bot"></span>
+            </label> 
+        </nav>
     </div>
-    <nav>
-        <div class="languageBtn">
-            <button (click)="toggleLanguage('en')" [class.active]="activeLanguage === 'en'"><span>EN</span></button>
-            <button (click)="toggleLanguage('de')" [class.active]="activeLanguage === 'de'"><span>DE</span></button>
-        </div>
-        <label class="menuButton">
-            <input type="checkbox" [checked]="isMenuOpen" (change)="toggleMenuBar()">
-            <span class="top"></span>
-            <span class="mid"></span>
-            <span class="bot"></span>
-        </label> 
-    </nav>
-    
-</section>
+</header>
 
 <div id="menuBar" [class.dnone]="!isMenuOpen">
-    <div class="menu content-beg">
-        <a href="#">{{ 'HEADER.NAV.ABOUT' | translate }}</a>
-        <a href="#">{{ 'HEADER.NAV.SKILLS' | translate }}</a>
-        <a href="#">{{ 'HEADER.NAV.PROJECTS' | translate }}</a>
+    <div class="menuContainer menu">
+        <div class="menuHeader content-beg">
+            <a (click)="toggleMenuBar()" href="#aboutMe">{{ 'HEADER.NAV.ABOUT' | translate }}</a>
+            <a (click)="toggleMenuBar()" href="#skills">{{ 'HEADER.NAV.SKILLS' | translate }}</a>
+            <a (click)="toggleMenuBar()" href="#portfolio">{{ 'HEADER.NAV.PROJECTS' | translate }}</a>
+        </div>
+        <div class="menuFooter">
+            <div class="menuFooterContainer content-beg">
+                <div class="menuFooterLeft">
+                    <a href="#contact" (click)="toggleMenuBar()"><h2>Say Hi</h2></a>
+                    <a href="mailto:contact@maik-groth.com">contact@maik-groth.com</a>
+                </div>
+                <div class="menuFooterRight">
+                    <a class="link bob-on-hover" target="__blank" href="https://github.com/croser93/portfolio"><img class="icon" src="assets/icon/git.svg" alt="gitIcon"></a>
+                    <a class="link bob-on-hover"  href="mailto:contact@maik-groth.com"><img class="icon" src="assets/icon/mail.svg" alt="mailIcon"></a>
+                    <a class="link bob-on-hover" target="__blank" href="https://www.linkedin.com/in/maik-groth"><img class="icon" src="assets/icon/indeed.svg" alt="indeedIcon"></a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

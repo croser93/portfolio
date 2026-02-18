@@ -1,21 +1,45 @@
 @use '../../../../../styles/variables' as *;
 
-
-section{
-     @include dpf ($jc: space-between,  $g: 32px);
-     height: 100px;
-     width: 100%;
+.header-wrapper {
+  position: fixed;
+  height: 64px;
+  top: 0;
+  left: 0;
+  width: 100%;           
+  z-index: 3;        
+  background-color: var(--bg-color);
+  border-bottom: 4px solid var(--highlight2-color-test); 
+  @include dpf (); 
+  >.header-content {
+    max-width: 1680px;
+    margin: 0 auto;  
+    width: 100%;
+    padding: 0 40px;  
+    @include dpf ($jc: space-between); 
+  }
 }
 
-nav{
-    @include dpf ($g: 32px);
+nav {
+  @include dpf ($jc: flex-end, $g: 32px);
+}
+
+#menuBar {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 64px);
+  background-color: var(--bg-color);
+  z-index: 2;
+  
+  &.dnone { display: none; }
 }
 
 .burgerMenu{
     width: 80px;
     height: 40px;
-
 }
+
 .logo{
   height: 48px;
 }
@@ -44,16 +68,85 @@ button{
 
 .menu{
     position: absolute;
+    margin-top: 64px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 2;
-    @include dpf ();
-    flex-direction: column;
-    width: 100%;
+    @include dpf-col ($g: 16px); 
     background-color: var(--bg-color) ;
-    border: var(--highlight2-color) 4px solid;
-    gap: 32px;
-    height: 600px;
     transition: max-height 1s ease;
-    >a {
+  }
+
+    @keyframes drawVertical {
+      0% {
+        height: 0;
+        
+      }
+      100% {
+        height: 70%;
+      }
+    }
+    
+    @keyframes drawHorizontal {
+      0% {
+        width: 0;
+        left: -24px;
+      }
+      100% {
+        left: -24px;
+        width: 110%;
+      }
+}
+
+.menuButton {
+  @include dpf-col ($g: 7px); 
+  color: #090909;
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 0.5em;
+  background: transparent;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+input {
+  display: none;
+  visibility: hidden;
+}
+
+.menuButton span {
+  width: 30px;
+  height: 4px;
+  background: black;
+  border-radius: 100px;
+  transition: 0.3s ease;
+}
+
+input[type]:checked ~ span.top {
+  transform: translateY(290%)rotate(45deg);
+  width: 40px;
+}
+
+input[type]:checked ~ span.bot {
+  transform: translateY(-270%) rotate(-45deg);
+  width: 40px;
+}
+
+input[type]:checked ~ span.mid {
+  transform: translateX(-20px);
+  opacity: 0;
+}
+
+
+h2{
+  color: var(--bg-color);
+}
+
+.menuHeader{
+  @include dpf-col ($g: 16px); 
+  height: calc((100vh - 64px) / 2 );
+
+  >a {
   position: relative;
   text-decoration: none;
   color: black;
@@ -83,71 +176,42 @@ button{
             }
         }
 
+}}
 
-    }}
-    @keyframes drawVertical {
-      0% {
-        height: 0;
-        
-      }
-      100% {
-        height: 70%;
-      }
-    }
-    
-    @keyframes drawHorizontal {
-      0% {
-        width: 0;
-        left: -24px;
-      }
-      100% {
-        left: -24px;
-        width: 110%;
-      }
-}
-
-
-
-
-.menuButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.menuContainer{
   flex-direction: column;
-  gap: 7px;
-  color: #090909;
-  width: 3.5em;
-  height: 3.5em;
-  border-radius: 0.5em;
-  background: transparent;
-  transition: all .3s;
-  cursor: pointer;
+  width: 100%;
+  justify-content: space-between
+
 }
 
-input {
-  display: none;
-  visibility: hidden;
-}
 
-.menuButton span {
-  width: 30px;
-  height: 4px;
-  background: #131313;
-  border-radius: 100px;
-  transition: 0.3s ease;
-}
-
-input[type]:checked ~ span.top {
-  transform: translateY(290%)rotate(45deg);
-  width: 40px;
-}
-
-input[type]:checked ~ span.bot {
-  transform: translateY(-270%) rotate(-45deg);
-  width: 40px;
-}
-
-input[type]:checked ~ span.mid {
-  transform: translateX(-20px);
-  opacity: 0;
+.menuFooter{
+  background-color: black;
+  width: 100%;
+  height: auto;
+  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+  height: calc((100vh - 64px) / 2 );
+  @include dpf(); 
+  >.menuFooterContainer{
+    @include dpf($jc: space-between, $ai:flex-end);
+    >.menuFooterRight{
+      @include dpf($g:24px);
+    }
+    >.menuFooterLeft{
+      @include dpf-col ($ai:flex-start,$g: 16px); 
+      >a{
+          text-decoration: none;
+          font-size: 22px;
+          font-family: "Overpass";
+          text-decoration: none;
+          color: var(--bg-color);
+          white-space: nowrap;
+            >h2:hover{
+              color:var(--highlight2-color)
+            
+          }
+        }
+    }
+  }
 }

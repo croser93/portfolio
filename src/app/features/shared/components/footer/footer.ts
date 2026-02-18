@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from "@angular/router";
+import { Router, RouterLink } from "@angular/router";
 import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
@@ -10,4 +10,13 @@ import { TranslatePipe } from '@ngx-translate/core';
 })
 export class Footer {
 
+  constructor(private router: Router) {}
+
+  scrollTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  isSubRoute(): boolean {
+    return  this.router.url == '/legal-notice' || this.router.url == '/privacy-policy'
+  }
 }

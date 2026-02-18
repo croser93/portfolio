@@ -3,60 +3,67 @@
         <div class="contactHeader">
             <h2>{{ 'CONTACT.TITLE' | translate }}</h2>
         </div>
-        <div class="formContainer">
+        <div class="formTextContainer">
             <h4>{{ 'CONTACT.DESCRIPTION' | translate }}</h4>
             <span>{{ 'CONTACT.DESCRIPTION_TEXT' | translate }}</span>
 
-            <div class="form-container">
-        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" autocomplete="off">
+        </div>
+        <div class="form-container">
+            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" autocomplete="off">
+                <div class="formInput">
+                    <div class="form-group">
+                        <input #name="ngModel" [(ngModel)]="contactData.name" minlength="1" maxlength="40" type="text"
+                            name="name" placeholder="{{ 'CONTACT.NAME' | translate }}" required
+                            pattern="[a-zA-Z\s\-äöüÄÖÜß]*">
+                    </div>
+                    <div class="errorContainer">
+                        @if (!name.valid && name.touched) {
+                        <span class="errorMassage">{{ 'CONTACT.ERR_NAME' | translate }}</span>
+                        }
+                    </div>
 
-            <div class="form-group">
-                <input #name="ngModel" [(ngModel)]="contactData.name" minlength="1" maxlength="40" type="text" name="name" placeholder="{{ 'CONTACT.NAME' | translate }}" required pattern="[a-zA-Z\s\-äöüÄÖÜß]*">
-            </div>
-            <div class="errorContainer">
-              @if (!name.valid && name.touched) {
-                    <span class="errorMassage">{{ 'CONTACT.ERR_NAME' | translate }}</span>
-                }
-            </div>
+                    <div class="form-group">
+                        <input #email="ngModel" [(ngModel)]="contactData.email" minlength="5" maxlength="40"
+                            type="email" name="email" placeholder="{{ 'CONTACT.EMAIL' | translate }}" required
+                            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                    </div>
+                    <div class="errorContainer">
+                        @if (!email.valid && email.touched) {
+                        <span class="errorMassage">{{ 'CONTACT.ERR_EMAIL' | translate }}</span>
+                        }
+                    </div>
 
-            <div class="form-group">
-                <input #email="ngModel" [(ngModel)]="contactData.email" minlength="5" maxlength="40" type="email" name="email" placeholder="{{ 'CONTACT.EMAIL' | translate }}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-            </div>
-            <div class="errorContainer">
-                @if (!email.valid && email.touched) {
-                    <span class="errorMassage">{{ 'CONTACT.ERR_EMAIL' | translate }}</span>
-                }
-            </div>
+                    <div class="form-group">
+                        <textarea #message="ngModel" [(ngModel)]="contactData.message" minlength="5" maxlength="500"
+                            name="message" placeholder="{{ 'CONTACT.MESSAGE' | translate }}" required></textarea>
+                    </div>
+                    <div class="errorContainer">
+                        @if (!message.valid && message.touched) {
+                        <span class="errorMassage">{{ 'CONTACT.ERR_MESSAGE' | translate }}</span>
+                        }
+                    </div>
 
-            <div class="form-group">
-                <textarea #message="ngModel"  [(ngModel)]="contactData.message" minlength="5" maxlength="500" name="message" placeholder="{{ 'CONTACT.MESSAGE' | translate }}" required></textarea>
-            </div>
-            <div class="errorContainer">
-                @if (!message.valid && message.touched) {
-                    <span class="errorMassage">{{ 'CONTACT.ERR_MESSAGE' | translate }}</span>
-                }
-            </div>
+                    <div class="checkbox-container">
+                        <input #checkBox="ngModel" [(ngModel)]="contactData.checkBox" name="checkBox" type="checkbox"
+                            id="privacy" required>
+                        <div for="privacy" class="checkbox-label">
+                            {{ 'CONTACT.PRIVACY_POLICY_TEXT_1' | translate }} <a (click)="scrollTop()" routerLink="privacy-policy"
+                                class="privacy-link">{{ 'CONTACT.PRIVACY_POLICY' | translate }}</a> {{
+                            'CONTACT.PRIVACY_POLICY_TEXT_2' | translate }}
+                        </div>
+                    </div>
 
-            <div class="checkbox-container">
-                <input #checkBox="ngModel" [(ngModel)]="contactData.checkBox" name="checkBox" type="checkbox" id="privacy" required>
-                <div for="privacy" class="checkbox-label">
-                    {{ 'CONTACT.PRIVACY_POLICY_TEXT_1' | translate }} <a routerLink="privacy-policy" class="privacy-link">{{ 'CONTACT.PRIVACY_POLICY' | translate }}</a> {{ 'CONTACT.PRIVACY_POLICY_TEXT_2' | translate }}
+                    <div class="errorContainer">
+                        @if (!checkBox.valid && checkBox.touched) {
+                        <span class="errorMassage">{{ 'CONTACT.ERR_PRIVACY_POLICY' | translate }}</span>
+                        }
+                    </div>
                 </div>
-            </div>
-
-            <div class="errorContainer">
-                @if (!checkBox.valid && checkBox.touched) {
-                    <span class="errorMassage">{{ 'CONTACT.ERR_PRIVACY_POLICY' | translate }}</span>
-                }
-            </div>
-
-            <div class="button-container">
-                <button [disabled]="contactForm.invalid" type="submit">{{ 'CONTACT.BUTTON' | translate }}</button>
-            </div>
-            
-        </form>
-    </div>
-
+                <div class="button-container">
+                    <button [disabled]="contactForm.invalid" type="submit">{{ 'CONTACT.BUTTON' | translate }}</button>
+                    <a href="#home"><img src="assets/icon/arrow-short.svg" alt=""></a>
+                </div>
+            </form>
         </div>
     </div>
 </section>
