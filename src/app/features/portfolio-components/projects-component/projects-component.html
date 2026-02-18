@@ -6,21 +6,27 @@
 
 @for (project of projects; track project.id; let i = $index) {
     <div class="projectsContainer" [class.rowReverse]="i % 2 !== 0">
-        <div>
+        <div (mouseenter)="hoveredProjectId = project.id" (mouseleave)="hoveredProjectId = null">
             <img src="{{ project.img }}" alt="">
         </div>
         <div class="containerRight">
             <div class="projectsNumber" >
                 <span>{{ project.titleId }} / {{ "0" + projects.length }}</span>
             </div>
-            <div class="projectsInfo">
-                <div class="projectsInfoText">
-                    <h3>{{ project.title }}</h3>
-                    <span>{{ project.codeBase }}</span>
-                    <p>{{ project.description | translate }}</p>
-                    <a target="_blank" rel="noopener noreferrer" href="{{ project.github }}"><button class="hoverBtn">Github</button></a>
+
+            @if (hoveredProjectId === project.id){
+                <div @fadeAnimation>
+                    <div class="projectsInfo">
+                        <div class="projectsInfoText">
+                            <h3>{{ project.title }}</h3>
+                            <span>{{ project.codeBase }}</span>
+                            <p>{{ project.description | translate }}</p>
+                            <a target="_blank" rel="noopener noreferrer" href="{{ project.github }}"><button class="hoverBtn">Github</button></a>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            }
+
         </div>
     </div>
 }
