@@ -35,15 +35,6 @@ section {
 
 .continuedLearing{
      @include dpf ($g:16px);
-     >span{
-        font-family: Overpass;
-        font-size: 22px;
-        font-weight: 400;
-        >a{
-            text-decoration: none;
-            color: var(--highlight2-color);
-        }
-    }   
 }
 
 .h2Container {
@@ -51,4 +42,38 @@ section {
     top: -54px;
     background-color: var(--bg-color); 
     padding: 0 24px;    
+}
+
+@media (max-width: 1250px) {
+.skill-item {
+   >img{ height: clamp(60px, 18vw, 80px); 
+    }
+     &:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+
+}
+}
+.continuedLearing{
+    >img{height: clamp(60px, 14vw, 80px); 
+    }
+}
+
+@media (max-width: 900px) {
+    .skills{
+    padding: 64px 0px;
+    gap: 48px;
+}
+
+}
+
+@media (max-width: 560px) {
+.skills-container  {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 32px 14px;
+        padding: 0px 24px;
+  }
 }

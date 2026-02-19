@@ -4,10 +4,7 @@ section{
     height: 720px;
 }
 button,
-span{
-        font-size: 22px;
-        font-family: Overpass;
-}
+
 
 .containerLeft{
     @include dpf-col($g: 48px);
@@ -27,12 +24,25 @@ span{
 }
 
 .imgContainer{
-    position: relative;
     > img {
-        position: relative;
-        top: 150px;
-        left: 0px;
-        height: 560px;
-        width: 560px;
+        height: clamp(30rem, 43vw, 35rem)
     }
+}
+
+@media (max-width: 1250px) {
+    section {
+        @include dpf-col();
+        height: 100vh;
+    }
+
+    .containerLeft {
+        max-width: 100%;
+        align-items: center;
+    }
+
+    .imgContainer{
+    > img {
+        height: clamp(19rem, 55vw, 35rem)
+    }
+}
 }
