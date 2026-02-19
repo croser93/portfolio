@@ -15,44 +15,57 @@ section{
     }
 }
 
-img{
-    width: 820px;
-    height: 460px;
-    border: 3px solid black;
-}
-
 .projectsContainer{
-    margin-top: 120px;
-    display: flex;
-    justify-content: space-between;
+    margin-top: 100px;
+    @include dpf-col();
     width: 100%;
+    gap: 16px;
 }
 
 .projectsNumber{
-    @include dpf ();
+    width: 100%;
+    @include dpf($jc: flex-end);
     >span{
         font-size: 48px;
         font-family: Syne-Bold;
         font-weight: 700;
     }
+}
 
+.projectsContent{
+    @include dpf($jc: space-between, $ai: center);
+    width: 100%;
+    gap: 16px;
+}
+
+.imageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+img{
+    width: clamp(37.5rem, 45vw, 51.25rem);
+    height: clamp(23.75rem, 29vw, 28.75rem);
+    border: 3px solid black;
 }
 
 .containerRight{
-    @include dpf-col($jc: flex-start, $ai: flex-end);
-
+    @include dpf($ai: center, $jc: flex-end);
 }
+
 .projectsInfo{
-    width: 700px;
+    width: 550px;
+    max-width: 100%;
+    
     >.projectsInfoText{
         @include dpf-col($ai: flex-start);
-        padding: 48px 0px;
-        max-width: 540px;
+        padding:24px;
+        max-width: 550px;
         gap: 16px;
         >h3{
             font-size: 3rem;
             font-family: Syne-ExtraBold;
-            text-wrap-mode: nowrap;
         }
         >span{
            font-family: Overpass;
@@ -68,8 +81,59 @@ img{
 }
 
 .rowReverse{
-    flex-direction: row-reverse;
-    >.containerRight{
-        align-items: flex-start;
+    .projectsNumber{
+        @include dpf($jc: flex-start);
+    }
+    
+    .projectsContent{
+        flex-direction: row-reverse;
+    }
+    
+    .imageContainer{
+        justify-content: flex-end;
+    }
+    
+    .containerRight{
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 1250px) {
+    .projectsContent{
+        @include dpf-col();
+    }
+
+    .imageContainer {
+        width: 100%;
+        justify-content: center;
+        
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .containerRight{
+        width: 100%;
+        justify-content: flex-start;
+        min-height: 400px;
+    }
+
+    .projectsInfo {
+        width: 100%;
+    }
+
+    .rowReverse{
+        .projectsContent{
+            flex-direction: column;
+        }
+        
+        .imageContainer{
+            justify-content: center;
+        }
+        
+        .containerRight{
+            justify-content: flex-start;
+        }
     }
 }

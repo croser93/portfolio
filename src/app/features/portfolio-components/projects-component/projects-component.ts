@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, inject } from '@angular/core';
+import { ChangeDetectorRef, Component, inject, HostListener} from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 import { trigger, transition, style, animate } from '@angular/animations';
 
@@ -19,19 +19,35 @@ interface projects {
   templateUrl: './projects-component.html',
   styleUrl: './projects-component.scss',
   animations: [
-    trigger('fadeAnimation', [
-      transition(':enter', [
-        style({ opacity: 0, transform: 'translateX({{ startX }})' }),
-        animate('400ms ease-out', style({ opacity: 1, transform: 'translateX(0)' }))
-      ], { params: { startX: '150px' } }),
-      transition(':leave', [
-        animate('600ms ease-in', style({ opacity: 0, transform: 'translateX({{ startX }})' }))
-      ], { params: { startX: '150px' } })
-    ])
-  ]
+  trigger('fadeAnimation', [
+    transition(':enter', [
+      // Hier wird der komplette String eingefügt (z.B. 'translateX(-150px)')
+      style({ opacity: 0, transform: '{{ startTransform }}' }), 
+      animate('400ms ease-out', style({ opacity: 1, transform: 'translate(0,0)' }))
+    ], { params: { startTransform: 'translateX(-150px)' } }), // Standardwert
+
+    transition(':leave', [
+      animate('600ms ease-in', style({ opacity: 0, transform: '{{ endTransform }}' }))
+    ], { params: { endTransform: 'translateX(-80px)' } })
+  ])
+]
 
 })
 export class ProjectsComponent {
+  isMobile: boolean = false;
+
+  ngOnInit() {
+  this.checkScreenSize(); // Das hier muss in den ngOnInit!
+}
+
+  @HostListener('window:resize')
+  onResize() {
+    this.checkScreenSize(); 
+  }
+
+  private checkScreenSize() {
+    this.isMobile = window.innerWidth <= 1250;
+  }
 
   private cdr = inject(ChangeDetectorRef);
   visibleProjects = new Map<number, boolean>();
@@ -58,6 +74,7 @@ export class ProjectsComponent {
     }, 5000);
     this.hideTimers.set(id, timer);
   }
+
 
   projects: projects[] = [
     {
@@ -88,8 +105,6 @@ export class ProjectsComponent {
       github: 'https://github.com/croser93/Pokedex.git'
     }
   ]
-
-
 
 
 }

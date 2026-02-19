@@ -1,3 +1,4 @@
+
 <section>
     <div class="headerProjektComponent">
         <h2>Portfolio</h2>
@@ -6,17 +7,22 @@
 
     @for (project of projects; track project.id; let i = $index) {
     <div class="projectsContainer" [class.rowReverse]="i % 2 !== 0">
-        <div (mouseenter)="onMouseEnter(project.id)" (mouseleave)="onMouseLeave(project.id)">
-            <img src="{{ project.img }}" alt="">
+        <div class="projectsNumber">
+            <span>{{ project.titleId }} / {{ "0" + projects.length }}</span>
         </div>
-        <div class="containerRight">
-            <div class="projectsNumber">
-                <span>{{ project.titleId }} / {{ "0" + projects.length }}</span>
+        <div class="projectsContent">
+            <div class="imageContainer">
+                <img (mouseenter)="onMouseEnter(project.id)" (mouseleave)="onMouseLeave(project.id)" src="{{ project.img }}" alt="">
             </div>
+            <div class="containerRight">
 
-            @if (isVisible(project.id)){
-            <div [@fadeAnimation]="{ value: '', params: { startX: i % 2 === 0 ? '-150px' : '150px' } }">
-                <div class="projectsInfo">
+                @if (isVisible(project.id)){
+                <div [@fadeAnimation]="{ value: 'any', params: {startTransform: isMobile ? 'translateY(-150px)' : (i % 2 === 0 ? 'translateX(-150px)' : 'translateX(150px)'), endTransform: isMobile ? 'translateY(-50px)' : (i % 2 === 0 ? 'translateX(-150px)' : 'translateX(150px)')}}" 
+                
+
+
+
+                class="projectsInfo">
                     <div class="projectsInfoText">
                         <h3>{{ project.title }}</h3>
                         <span>{{ project.codeBase }}</span>
@@ -25,8 +31,8 @@
                                 class="hoverBtn">Github</button></a>
                     </div>
                 </div>
+                }
             </div>
-            }
 
         </div>
     </div>
