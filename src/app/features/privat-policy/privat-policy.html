@@ -13,18 +13,18 @@
           <p>{{ "PRIVACY.SECTION_1.P_1" | translate }}</p>
         </div>
 
-        <div class="privacy_subsection">
+        <div class="privacy_subsection_DataCollection">
           <h4>{{ "PRIVACY.SECTION_1.SUB_2" | translate }}</h4>
           
           <div class="privacy_item">
             <h5>{{ "PRIVACY.SECTION_1.Q_1" | translate }}</h5>
-            <p>{{ "PRIVACY.SECTION_1.A_1" | translate }}</p>
+              <p>{{ "PRIVACY.SECTION_1.A_1" | translate }}</p>
           </div>
 
           <div class="privacy_item">
             <h5>{{ "PRIVACY.SECTION_1.Q_2" | translate }}</h5>
-            <p>{{ "PRIVACY.SECTION_1.A_2_1" | translate }}</p>
-            <p>{{ "PRIVACY.SECTION_1.A_2_2" | translate }}</p>
+              <p>{{ "PRIVACY.SECTION_1.A_2_1" | translate }}</p>
+              <p>{{ "PRIVACY.SECTION_1.A_2_2" | translate }}</p>
           </div>
 
           <div class="privacy_item">
@@ -75,8 +75,15 @@
         <div class="privacy_subsection">
           <h4>{{ "PRIVACY.SECTION_3.SUB_2" | translate }}</h4>
           <p>{{ "PRIVACY.SECTION_3.P_4" | translate }}</p>
-          <p [innerHTML]="'PRIVACY.SECTION_3.P_5' | translate"></p>
-          <p [innerHTML]="'PRIVACY.SECTION_3.P_6' | translate"></p>
+
+          <ul>
+            <li>Maik Groth</li>
+            <li>Lange Reihe 50</li>
+            <li>23628 Krumesse</li>
+            <li>Phone: 017668032734</li>
+            <li>E-Mail: <a href="mailto:contact@maik-groth.com">contact@maik-groth.com</a></li>
+          </ul>
+
           <p>{{ "PRIVACY.SECTION_3.P_7" | translate }}</p>
         </div>
 

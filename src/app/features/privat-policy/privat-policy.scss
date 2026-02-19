@@ -17,6 +17,10 @@ width: 100%;
     }
 }
 
+.privacy_subsection_DataCollection{
+        @include dpf-col ($ai: flex-start, $g: 16px);
+    }
+
 ul{
     padding: 16px 32px;
 }
