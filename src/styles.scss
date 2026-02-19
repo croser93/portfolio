@@ -159,3 +159,11 @@ a{
   -webkit-animation-direction: normal, alternate;
   animation-direction: normal, alternate;
 }
+
+
+@media (max-width: 650px){
+   .border{
+  padding: 0px 8px;
+ }
+
+}

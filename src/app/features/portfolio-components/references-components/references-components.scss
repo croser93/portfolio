@@ -17,7 +17,8 @@ section{
     width: 100%;
     max-width: 1200px;
     height: 450px;
-    @include dpf-col($jc: center);
+    @include dpf-col();
+    overflow: hidden;
 }
 
 h4{
@@ -51,7 +52,7 @@ span {
     cursor: pointer;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     transform: 
-        translateX(calc(var(--offset) * 280px)) 
+        translateX(calc(var(--offset) * 480px)) 
         scale(calc(1 - abs(var(--offset)) * 0.15)) 
         translateZ(calc(abs(var(--offset)) * -250px))
         rotateY(calc(var(--offset) * 0deg));
@@ -109,7 +110,7 @@ span {
     @include dpf();
     >.cardInteraktiv{
         @include dpf($jc: space-between);
-        width: 600px;
+        width: clamp(300px, 80vw, 600px);
     }
 }
 
@@ -120,7 +121,36 @@ span {
         gap: 10px;
     }
     .card {
-        max-width: 80vw;
-        transform: translateX(calc(var(--offset) * 160px)) scale(calc(1 - abs(var(--offset)) * 0.2)) translateZ(calc(abs(var(--offset)) * -150px));
+
+        transform: translateX(calc(var(--offset) * 200px)) scale(calc(1 - abs(var(--offset)) * 0.2)) translateZ(calc(abs(var(--offset)) * -150px));
+    }
+}
+
+@media (max-width: 850px) {
+    .carousel-track {
+        perspective: clamp(300px, 80vw, 900px);
+    }
+    .card {
+    max-width: 500px;
+    padding: 24px;
+    }
+
+    .refContainer{
+        height: 580px;
+    }
+
+    .carousel-track{
+        width: clamp(208px, 72vw, 600px);
+    }
+}
+
+@media (max-width: 550px) {
+        .card {
+    max-width: 500px;
+    padding: 8px;
+    }
+
+    .card {
+    transform: translateX(calc(var(--offset) * 80px)) scale(calc(1 - abs(var(--offset)) * 0.2)) translateZ(calc(abs(var(--offset)) * -150px));
     }
 }

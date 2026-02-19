@@ -3,8 +3,6 @@
     <span>{{ 'REFERENCES.DESCRIPTION' | translate }}</span>
 
     <div class="carousel-main-container">
-        <!-- <button class="nav-btn prev" (click)="prev()">❮</button> -->
-
         <div class="refContainer">
             <div class="carousel-track">
                 @for (comment of humanComments; track comment.id; let i = $index) {
@@ -23,8 +21,6 @@
                 }
             </div>
         </div>
-
-        <!-- <button class="nav-btn next" (click)="next()">❯</button> -->
     </div>
 
     <div class="cardInteraktivContainer">
