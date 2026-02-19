@@ -11,6 +11,7 @@ section {
     >div {
         display: flex;
         flex-direction: column;
+        padding: 24px;
     }
 }
 
@@ -30,12 +31,15 @@ section {
     padding: 48px 0px;
 
     >h4 {
-        font-size: 2rem;
+        font-size: clamp(1.5rem, 6vw, 2rem);
         color: var(--highlight2-color);
+        text-align: center;
     }
 
     >span {
         font-size: 1.375rem;
+        font-size: clamp(1rem, 6vw, 1.375rem);
+        text-align: center;
     }
 
 }
@@ -48,7 +52,7 @@ section {
         @include dpf-col();
         width: 100%;
         >.formInput {
-            width: 620px;
+            width: clamp(18.75rem, 80vw, 38.75rem);
             color: white;
         }
     }
@@ -124,6 +128,7 @@ input[type="checkbox"] {
 .privacy-link {
     color: var(--highlight2-color);
     text-decoration: none;
+    font-size: 16px;
 
     &:hover {
         text-decoration: underline;
@@ -142,6 +147,7 @@ input[type="checkbox"] {
     }
 
     >a {
+        
         grid-column: 3;
         justify-self: end;
         img {
@@ -200,7 +206,6 @@ button {
 .errorMassage {
     color: red;
     font-size: 1rem;
-    padding: 0px 24px;
 }
 
 textarea.ng-valid.ng-touched,
@@ -215,4 +220,23 @@ input.ng-invalid.ng-touched {
     background-image: url("/assets/icon/req.svg");
     background-repeat: no-repeat;
     background-position: right 10px center;
+}
+
+@media (max-width: 1250px) {
+    section{
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 100%);
+    }
+}
+
+@media (max-width: 850px) {
+    .homeArrow{
+        display: none;
+    }
+    .errorContainer {
+    margin-top: 8px;
+}
+.formInput{
+    height: 500px;
+}
+
 }
