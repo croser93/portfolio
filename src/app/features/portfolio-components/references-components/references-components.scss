@@ -15,7 +15,7 @@ section {
 }
 
 .refContainer {
-    @include dpf ($jc: space-between);
+    @include dpf ($jc: space-between, $g:8px);
     width: 100%;
 
     >div {

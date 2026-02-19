@@ -32,7 +32,10 @@ button,
 @media (max-width: 1250px) {
     section {
         @include dpf-col();
-        height: 100vh;
+    }
+
+    section{
+    height: auto;
     }
 
     .containerLeft {
@@ -46,3 +49,9 @@ button,
     }
 }
 }
+
+@media (max-width: 450px){
+    .containerLeft {
+    gap: 16px;
+    padding: 16px 8px;
+}}

@@ -5,13 +5,7 @@ section{
     >.headerProjektComponent {
         @include dpf-col();
         gap: 20px;
-        >span{
-        font-family: Overpass;
-        font-size: 22px;
-        font-weight: 400;
-        max-width: 500px;
-        text-align: center;
-        }
+
     }
 }
 
@@ -26,7 +20,7 @@ section{
     width: 100%;
     @include dpf($jc: flex-end);
     >span{
-        font-size: 48px;
+        font-size: clamp(1.5rem, 8vw, 3rem);
         font-family: Syne-Bold;
         font-weight: 700;
     }
@@ -52,6 +46,7 @@ img{
 
 .containerRight{
     @include dpf($ai: center, $jc: flex-end);
+    padding: 0px 56px;
 }
 
 .projectsInfo{
@@ -64,18 +59,18 @@ img{
         max-width: 550px;
         gap: 16px;
         >h3{
-            font-size: 3rem;
+            font-size: clamp(1.5rem, 8vw, 3rem);
             font-family: Syne-ExtraBold;
         }
         >span{
            font-family: Overpass;
-           font-size: 1.8rem;
+           font-size: clamp(1.2rem, 8vw, 1.8rem);
            color: var(--highlight2-color);
            font-weight: 600;
         }
         >p {
             font-family: Overpass;
-           font-size: 1.25rem;
+           font-size: clamp(1rem, 4vw, 1.25rem);
         }      
     }
 }
