@@ -6,11 +6,7 @@ width: 100%;
      flex-direction: column;
 }
 
-span{
-    font-size: 1rem;
-}
-
-.content{
+.privacy_content{
     display: flex;
         flex-direction: column;
         gap: 48px;
@@ -21,14 +17,35 @@ span{
     }
 }
 
+.privacy_subsection_DataCollection{
+        @include dpf-col ($ai: flex-start, $g: 16px);
+    }
+
 ul{
     padding: 16px 32px;
 }
-
-h3{font-size: 1.5rem;
-        color: var(--highlight2-color);
+.privacy_header{
+    padding: 24px 0px;
+    >h2{
+        font-size: clamp(1.5rem, 7vw, 4.875rem);
+    }
+    }
+h3{
+    font-size: clamp(1.2rem, 5vw, 1.5rem);
+    color: var(--highlight2-color);
 }
 
 h4{
-font-size: 1.25rem;
+font-size: clamp(1.1rem, 5vw, 1.25rem);
+}
+
+h5{
+    font-size: 1rem;
+}
+
+@media (max-width: 1250px) {
+    section{
+    padding:120px 24px;
+    }
+
 }

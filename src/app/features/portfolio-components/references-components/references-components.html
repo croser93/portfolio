@@ -2,16 +2,36 @@
     <h2>{{ 'REFERENCES.TITLE' | translate }}</h2>
     <span>{{ 'REFERENCES.DESCRIPTION' | translate }}</span>
 
-    <div class="refContainer">
-        @for (comment of humanComments; track comment.id; let i = $index) {
-        <div>
-            <div class="commentHead">
-                <img src="assets/icon/format_quote.svg" alt="">
-                <h4>{{ comment.name }}</h4>
-                <span> {{comment.job}} </span>
+    <div class="carousel-main-container">
+        <div class="refContainer">
+            <div class="carousel-track">
+                @for (comment of humanComments; track comment.id; let i = $index) {
+                    <div class="card" 
+                         [class.active]="i === currentIndex"
+                         (click)="setSlide(i)"
+                         [style.--offset]="i - currentIndex">
+                        
+                        <div class="commentHead">
+                            <img src="assets/icon/format_quote.svg" alt="">
+                            <h4>{{ comment.name }}</h4>
+                            <span>{{ comment.job }}</span>
+                        </div>
+                        <p>{{ comment.description | translate }}</p>
+                    </div>
+                }
             </div>
-            <p> {{comment.description | translate }} </p>
         </div>
-    }
+    </div>
+
+    <div class="cardInteraktivContainer">
+        <div class="cardInteraktiv">
+            <button class="nav-btn prev" (click)="prev()">❮</button>
+            <div class="pagination">
+                @for (c of humanComments; track $index) {
+                    <span class="dot" [class.active]="$index === currentIndex" (click)="setSlide($index)"></span>
+                }
+            </div>
+            <button class="nav-btn next" (click)="next()">❯</button>
+        </div>
     </div>
 </section>

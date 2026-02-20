@@ -11,14 +11,14 @@ section{
 }
 
 h1 {
-    font-size: 8rem;
+    font-size: clamp(2rem, 10vw, 8rem);
     font-family: "Syne-ExtraBold";
     @include dpf-col();
-    line-height: 104px;
+    line-height: clamp(32px, 10vw, 104px);
 
 }
 h4{
-    font-size: 48px;
+    font-size: clamp(1.2rem, 6vw, 3rem);
     font-family: "Overpass";
     color: var(--highlight2-color);
     font-weight: bolder;
@@ -40,12 +40,14 @@ h4{
 
 .email-sidebar {
     position: absolute;
-    left: 0px;
+    height: 24px;
+    left: 5px;
     bottom: 32px; 
     transform: rotate(-90deg);
     transform-origin: left bottom;
+    padding: 8px;
     >a {
-        font-size: 22px;
+        font-size:clamp(1rem, 5vw, 1.375rem);
         font-family: "Overpass";
         text-decoration: none;
         color: black;

@@ -1,13 +1,14 @@
 @use '../../../../styles/variables' as *;
+
 section {
     margin-top: 120px;
     border: 3px solid black;
-    position: relative; 
+    position: relative;
     @include dpf ();
     flex-direction: column;
 }
 
-.skills{
+.skills {
     width: 100%;
     padding: 100px 0px;
     @include dpf ();
@@ -17,12 +18,14 @@ section {
 
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); 
-    gap: 78px 20px; 
+    grid-template-columns: repeat(5, 1fr);
+    gap: 78px 20px;
     width: 100%;
+
     >.skill-item {
         @include dpf ();
-        >img{
+
+        >img {
             transition: transform 0.3s ease-in-out;
 
             &:hover {
@@ -33,22 +36,110 @@ section {
     }
 }
 
-.continuedLearing{
-     @include dpf ($g:16px);
-     >span{
-        font-family: Overpass;
-        font-size: 22px;
-        font-weight: 400;
-        >a{
-            text-decoration: none;
-            color: var(--highlight2-color);
+.continuedLearing {
+    @include dpf ($g: 16px);
+    position: relative;
+
+    &:hover {
+        .bubble {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-15%) translateY(-20px);
         }
-    }   
+    }
 }
+
+.bubble {
+    @include dpf-col ($g: 16px);
+    position: absolute;
+    bottom: 60%;
+    left: 20%;
+    transform: translateX(-15%) translateY(0px);
+    background-color: var(--bg-color);
+    padding: 16px 24px;
+    border-radius: 30px 30px 30px 0px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
+    opacity: 0;
+    max-width: 300px;
+    transition: all 0.3s ease-out;
+    z-index: 3;
+    text-align: center;
+
+
+
+    >.bubble-icons {
+        @include dpf ($g: 48px);
+    }
+
+    >.bubble-icon {
+        @include dpf-col ($g: 8px);
+        >img {
+            height: 48px;
+        }
+        >span {
+            font-family: 'Overpass';
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+}
+
 
 .h2Container {
     position: absolute;
     top: -54px;
-    background-color: var(--bg-color); 
-    padding: 0 24px;    
+    background-color: var(--bg-color);
+    padding: 0 24px;
+}
+
+@media (max-width: 1250px) {
+    .skill-item {
+        >img {
+            height: clamp(60px, 18vw, 80px);
+        }
+
+        &:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+    }
+}
+
+.continuedLearing {
+    padding: 0px 16px;
+
+    >img {
+        height: clamp(48px, 10vw, 80px);
+    }
+}
+
+@media (max-width: 900px) {
+    .skills {
+        padding: 64px 0px;
+        gap: 48px;
+    }
+
+    .h2Container {
+        top: calc(-5.52vw - 4.35px);
+        padding: 0 8px;
+    }
+
+}
+
+@media (max-width: 560px) {
+    .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 32px 14px;
+        padding: 0px 24px;
+    }
+
+    .bubble-icon {
+        >img {
+            height: 40px !important;
+        }
+    }
 }

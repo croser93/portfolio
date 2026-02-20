@@ -6,14 +6,28 @@
     <div class="skills">
         <div class="skills-container">
             @for (skill of skillsArry; track skill) {
-                <div class="skill-item">
-                    <img [src]="skill" alt="Skill Icon">
-                </div>
+            <div class="skill-item">
+                <img [src]="skill" alt="Skill Icon">
+            </div>
             }
         </div>
         <div class="continuedLearing">
+            <div class="bubble">
+                <span class="bubble-text">{{'SKILLS.LEARNING' | translate }}</span>
+                <div class="bubble-icons">
+                    <div class="bubble-icon">
+                        <img src="assets/icon/skills/vue.svg" alt="Vue">
+                        <span>Vue</span>
+                    </div>
+                    <div class="bubble-icon">
+                        <img src="assets/icon/skills/react.svg" alt="React">
+                        <span>React</span>
+                    </div>
+                </div>
+            </div>
             <img src="assets/icon/Property 1=Continued learning.svg" alt="learningIcon">
-            <span>{{ 'SKILLS.DESCRIPTION-1' | translate }}<a href="#">{{ 'SKILLS.CONTACT' | translate }}</a> {{ 'SKILLS.DESCRIPTION-2' | translate }}</span>
+            <span>{{ 'SKILLS.DESCRIPTION-1' | translate }}<a href="#">{{ 'SKILLS.CONTACT' | translate }}</a> {{
+                'SKILLS.DESCRIPTION-2' | translate }}</span>
         </div>
     </div>
 </section>

@@ -1,56 +1,156 @@
 @use '../../../../styles/variables' as *;
 
-section {
-    margin-top: 120px;
-    @include dpf-col ();
 
-    >span {
-        font-family: Overpass;
-        font-size: 1.375rem;
-        font-weight: 400;
-        padding: 40px 0px;
-        max-width: 600px;
-        text-align: center;
-    }
+section{
+    @include dpf-col();
+    margin-top: 120px;
+}
+.carousel-main-container {
+    @include dpf($g: 40px);
+    width: 100%;
+    position: relative;
+    padding: 0 60px; // Platz für Buttons
 }
 
 .refContainer {
-    @include dpf ($jc: space-between);
+    position: relative;
     width: 100%;
+    max-width: 1200px;
+    height: 450px;
+    @include dpf-col();
+    overflow: hidden;
+}
 
-    >div {
-        @include dpf-col ($g: 16px);
-        padding: 16px;
-        max-width: 480px;
-        border: 4px black solid;
-        text-align: center;
+h4{
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    margin-bottom: 8px;
+}
 
-        &:hover {
-            border-color: var(--highlight2-color);
-            .commentHead img {
-                filter: invert(27%) sepia(98%) saturate(3000%) hue-rotate(237deg) brightness(100%) contrast(101%);
-            }
-        }
+span {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+}
 
-        >.commentHead {
-            @include dpf-col ($g: 8px);
+.carousel-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    perspective: 900px;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-            >h4 {
-                font-family: Syne-bold;
-                font-size: 1.375rem;
-            }
+.card {
+    position: absolute;
+    width: 100%;
+    max-width: 500px;
+    padding: 32px;
+    border: 4px black solid;
+    background-color: var(--bg-color);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    transform: 
+        translateX(calc(var(--offset) * 480px)) 
+        scale(calc(1 - abs(var(--offset)) * 0.15)) 
+        translateZ(calc(abs(var(--offset)) * -250px))
+        rotateY(calc(var(--offset) * 0deg));
 
-            >span {
-                font-size: 1rem;
-            }
-        }
+    z-index: calc(10 - abs(var(--offset)));
+    opacity: calc(1 - var(--abs-offset) * 0.5);
+    $offset-sq: calc(var(--offset) * var(--offset));
+    &.active {
+        opacity: 1;
+        border-color: var(--highlight2-color);
+        transform: translateX(0) scale(1.1) translateZ(0) rotateY(0);
+        z-index: 20;
+    }
+    >.commentHead{
+        padding: 8px;
+    }
+}
 
-        >p {
-            font-size: 1.2rem;
-            font-weight: 400;
-            height: 220px;
+
+.nav-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--highlight2-color);
+    background-color: var(--bg-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.2s;
+    @include dpf(center, center);
+
+    &:hover {
+        background-color: var(--highlight2-color);
+        color: white;
+        border-color: var(--highlight2-color);
+    }
+}
+
+.pagination {
+    @include dpf($jc: center, $g: 10px);
+    margin-top: 20px;
+    .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        border: 1px solid black;
+        cursor: pointer;
+        &.active { background: var(--highlight2-color); 
+                width: 18px;
+                height: 18px;
         }
     }
+}
+
+.cardInteraktivContainer{
+    @include dpf();
+    >.cardInteraktiv{
+        @include dpf($jc: space-between);
+        width: clamp(300px, 80vw, 600px);
+    }
+}
 
 
+@media (max-width: 1250px) {
+    .carousel-main-container {
+        padding: 0 10px;
+        gap: 10px;
+    }
+    .card {
+
+        transform: translateX(calc(var(--offset) * 200px)) scale(calc(1 - abs(var(--offset)) * 0.2)) translateZ(calc(abs(var(--offset)) * -150px));
+    }
+}
+
+@media (max-width: 850px) {
+    .carousel-track {
+        perspective: clamp(300px, 80vw, 900px);
+    }
+    .card {
+    max-width: 500px;
+    padding: 24px;
+    }
+
+    .refContainer{
+        height: 580px;
+    }
+
+    .carousel-track{
+        width: clamp(208px, 72vw, 600px);
+    }
+}
+
+@media (max-width: 550px) {
+        .card {
+    max-width: 500px;
+    padding: 8px;
+    }
+
+    .card {
+    transform: translateX(calc(var(--offset) * 80px)) scale(calc(1 - abs(var(--offset)) * 0.2)) translateZ(calc(abs(var(--offset)) * -150px));
+    }
 }
