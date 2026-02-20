@@ -14,6 +14,6 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideHttpClient(),
     provideAnimations(),
-    provideTranslateService({ loader: provideTranslateHttpLoader({ prefix: '/assets/i18n/', suffix: '.json' }), fallbackLang: 'en', lang: 'en' })
+    provideTranslateService({ loader: provideTranslateHttpLoader({ prefix: 'assets/i18n/', suffix: '.json' }), fallbackLang: 'en', lang: 'en' })
   ]
 };
