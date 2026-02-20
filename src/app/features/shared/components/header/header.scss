@@ -5,17 +5,18 @@
   height: 64px;
   top: 0;
   left: 0;
-  width: 100%;           
-  z-index: 3;        
+  width: 100%;
+  z-index: 3;
   background-color: var(--bg-color);
-  border-bottom: 4px solid var(--highlight2-color-test); 
-  @include dpf (); 
+  border-bottom: 4px solid var(--highlight2-color-test);
+  @include dpf ();
+
   >.header-content {
     max-width: 1680px;
-    margin: 0 auto;  
+    margin: 0 auto;
     width: 100%;
-    padding: 0 40px;  
-    @include dpf ($jc: space-between); 
+    padding: 0 40px;
+    @include dpf ($jc: space-between);
   }
 }
 
@@ -31,75 +32,85 @@ nav {
   height: calc(100vh - 64px);
   background-color: var(--bg-color);
   z-index: 2;
-  
-  &.dnone { display: none; }
+  &.dnone {
+    display: none;
+  }
 }
 
-.burgerMenu{
-    width: 80px;
-    height: 40px;
+.burgerMenu {
+  width: 80px;
+  height: 40px;
 }
 
-.logo{
+.logo {
   height: 48px;
 }
 
-.languageBtn{
-    @include dpf ($g: 16px);
+.languageBtn {
+  @include dpf ($g: 16px);
 }
 
-button{
-    border: none;
-    height: 40px;
-    width: 56px;
-    cursor: pointer;
-    background-color: transparent;
-    >span{
-        font-size: 16px;
-        font-family: Syne-Bold;
-    }
-        &:hover{
-            background-color: var(--highlight2-color-test);
-        }
-        &.active{
-            border: 3px solid var(--highlight2-color);
-        }
+.mobile-language {
+  display: none;
 }
 
-.menu{
-    position: absolute;
-    margin-top: 64px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-    @include dpf-col ($g: 16px); 
-    background-color: var(--bg-color) ;
-    transition: max-height 1s ease;
+button {
+  border: none;
+  height: 40px;
+  width: 56px;
+  cursor: pointer;
+  background-color: transparent;
+
+  >span {
+    font-size: 16px;
+    font-family: Syne-Bold;
   }
 
-    @keyframes drawVertical {
-      0% {
-        height: 0;
-        
-      }
-      100% {
-        height: 70%;
-      }
-    }
-    
-    @keyframes drawHorizontal {
-      0% {
-        width: 0;
-        left: -24px;
-      }
-      100% {
-        left: -24px;
-        width: 110%;
-      }
+  &:hover {
+    background-color: var(--highlight2-color-test);
+  }
+
+  &.active {
+    border: 3px solid var(--highlight2-color);
+  }
+}
+
+.menu {
+  position: absolute;
+  margin-top: 64px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  @include dpf-col ($g: 16px);
+  background-color: var(--bg-color);
+  transition: max-height 1s ease;
+}
+
+@keyframes drawVertical {
+  0% {
+    height: 0;
+
+  }
+
+  100% {
+    height: 70%;
+  }
+}
+
+@keyframes drawHorizontal {
+  0% {
+    width: 0;
+    left: -24px;
+  }
+
+  100% {
+    left: -24px;
+    width: 110%;
+  }
 }
 
 .menuButton {
-  @include dpf-col ($g: 7px); 
+  @include dpf-col ($g: 7px);
   color: #090909;
   width: 3.5em;
   height: 3.5em;
@@ -122,96 +133,125 @@ input {
   transition: 0.3s ease;
 }
 
-input[type]:checked ~ span.top {
+input[type]:checked~span.top {
   transform: translateY(290%)rotate(45deg);
   width: 40px;
 }
 
-input[type]:checked ~ span.bot {
+input[type]:checked~span.bot {
   transform: translateY(-270%) rotate(-45deg);
   width: 40px;
 }
 
-input[type]:checked ~ span.mid {
+input[type]:checked~span.mid {
   transform: translateX(-20px);
   opacity: 0;
 }
 
 
-h2{
+h2 {
   color: var(--bg-color);
 }
 
-.menuHeader{
-  @include dpf-col ($g: 16px); 
-  height: calc((100vh - 64px) / 2 );
+.menuHeader {
+  @include dpf-col ($g: 16px);
+  height: calc((100vh - 64px) / 2);
 
   >a {
-  position: relative;
-  text-decoration: none;
-  color: black;
-  font-family: Syne-Bold;
-  font-size: 6rem;
-  font-weight: 700;
-        &:hover{
-            &::before {
-                content: '';
-                position: absolute;
-                left: -24px;
-                top: 32px;
-                width: 4px;
-                height: 0;
-                background-color: black;
-                animation: drawVertical 0.3s forwards;
-            }
-            &::after {
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                height: 6px;
-                width: 0;           
-                background-color: black;
-                animation: drawHorizontal 0.8s 0.2s forwards;
-            }
-        }
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-family: Syne-Bold;
+    font-size: clamp(1.8rem, 10vw, 6rem);
+    font-weight: 700;
 
-}}
+    &:hover {
+      &::before {
+        content: '';
+        position: absolute;
+        left: -24px;
+        top: 32px;
+        width: 4px;
+        height: 0;
+        background-color: black;
+        animation: drawVertical 0.3s forwards;
+      }
 
-.menuContainer{
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 6px;
+        width: 0;
+        background-color: black;
+        animation: drawHorizontal 0.8s 0.2s forwards;
+      }
+    }
+
+  }
+}
+
+.menuContainer {
   flex-direction: column;
   width: 100%;
   justify-content: space-between
-
 }
 
 
-.menuFooter{
+.menuFooter {
   background-color: black;
   width: 100%;
   height: auto;
   clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
-  height: calc((100vh - 64px) / 2 );
-  @include dpf(); 
-  >.menuFooterContainer{
-    @include dpf($jc: space-between, $ai:flex-end);
-    >.menuFooterRight{
-      @include dpf($g:24px);
+  height: calc((100vh - 64px) / 2);
+  padding: 0px 24px;
+  @include dpf();
+
+  >.menuFooterContainer {
+    @include dpf($jc: space-between, $ai: flex-end);
+
+    >.menuFooterRight {
+      @include dpf($g: 24px);
     }
-    >.menuFooterLeft{
-      @include dpf-col ($ai:flex-start,$g: 16px); 
-      >a{
-          text-decoration: none;
-          font-size: 22px;
-          font-family: "Overpass";
-          text-decoration: none;
-          color: var(--bg-color);
-          white-space: nowrap;
-            >h2:hover{
-              color:var(--highlight2-color)
-            
-          }
+
+    >.menuFooterLeft {
+      @include dpf-col ($ai: flex-start, $g: 16px);
+
+      >a {
+        text-decoration: none;
+        font-size: clamp(1rem, 5vw, 1.375rem);
+        font-family: "Overpass";
+        text-decoration: none;
+        color: var(--bg-color);
+        white-space: nowrap;
+
+        >h2:hover {
+          color: var(--highlight2-color)
         }
+      }
     }
   }
+}
+
+@media (max-width: 600px) {
+  .menuFooterRight {
+    display: none !important;
+  }
+
+  .menuFooterContainer {
+    justify-content: center !important;
+  }
+
+  .desktop-language {
+    display: none;
+  }
+
+  .mobile-language {
+    display: flex;
+    margin-bottom: 24px;
+    justify-content: flex-start;
+
+  }
+
 }
