@@ -6,7 +6,6 @@
       "PROJECTS": "My Projects"
     }
   },
-
   "ABOUT_ME": {
     "TITLE": "About Me",
     "DESCRIPTION": "I am currently retraining as a software developer and truly enjoy programming. I originally come from the automotive industry, where I especially liked troubleshooting and finding practical solutions. This structured way of thinking now helps me a lot in IT. I am learning new technologies step by step and enjoy continuously expanding my knowledge. If something doesn’t work right away, I stay persistent and keep working on it until I find a solution. I am highly motivated and look forward to growing both professionally and personally.",
@@ -14,101 +13,85 @@
     "REMOTE": "Open to work Remote",
     "BUTTON": "Let's Talk"
   },
-
   "SKILLS": {
     "TITLE": "MY SKILLS",
     "DESCRIPTION-1": "Don't see the skill your need? ",
     "DESCRIPTION-2": "I'm always ready to learn!",
     "CONTACT": "Contact me",
-    "LEARNING":"I have a special interest in learning"
+    "LEARNING": "I have a special interest in learning"
   },
-
   "PORTFOLIO": {
     "TITLE": "Portfolio",
     "DESCRIPTION": "Explore a selection of my work here - Interact with projects to see my skills in action",
-    "1":"Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
-    "2":"A simple Jump-and-Run game based on object-oriented approach. Help Elvoron to find coins and mana to fight against the Hellknight.",
-    "3":"Based on the PokéAPI a simple libary hat provides and catalogues pokemon information."
+    "1": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+    "2": "A simple Jump-and-Run game based on object-oriented approach. Help Elvoron to find coins and mana to fight against the Hellknight.",
+    "3": "Based on the PokéAPI a simple libary hat provides and catalogues pokemon information."
   },
-
   "REFERENCES": {
     "TITLE": "References",
     "DESCRIPTION": "I thrive both independently and as part of a team. Here's what my colleagues have to say about working with me.",
-    "1":"Maik is a highly passionate and driven developer. His work ethic and commitment throughout the entire project were truly remarkable, handling every task with meticulous care and consistent reliability. Beyond his technical skills, he is a dedicated team player who fosters a positive atmosphere and proactively supports his colleagues with insightful solutions. Maik is a genuine asset to any development team.",
-    "2":"Working with you was a great experience. You collaborate well within a team and consistently show strong dedication. Your solid understanding of CSS stood out, especially when you successfully resolved a challenging issue. Your code was always clean and well-structured, making it easy to understand and maintain. You also contributed positively to the team’s productivity by fostering a supportive and motivating work environment.",
-    "3":"It was a great pleasure to work with Michael. He knows how to push and encourage team members to present the best work possible, always adding something to brainstorm. Regarding the well-being of group members, he was always present and available to listen and help others, with a great sense of humor as well."
+    "1": "Maik is a highly passionate and driven developer. His work ethic and commitment throughout the entire project were truly remarkable, handling every task with meticulous care and consistent reliability. Beyond his technical skills, he is a dedicated team player who fosters a positive atmosphere and proactively supports his colleagues with insightful solutions. Maik is a genuine asset to any development team.",
+    "2": "Working with you was a great experience. You collaborate well within a team and consistently show strong dedication. Your solid understanding of CSS stood out, especially when you successfully resolved a challenging issue. Your code was always clean and well-structured, making it easy to understand and maintain. You also contributed positively to the team’s productivity by fostering a supportive and motivating work environment.",
+    "3": "It was a great pleasure to work with Michael. He knows how to push and encourage team members to present the best work possible, always adding something to brainstorm. Regarding the well-being of group members, he was always present and available to listen and help others, with a great sense of humor as well."
   },
-
-    
   "CONTACT": {
     "TITLE": "Say Hi!",
     "DESCRIPTION": "Want to discuss a new project?",
     "DESCRIPTION_TEXT": "say hello! let's discuss your ideas and make it happen.",
-    "NAME":"Your name",
-    "EMAIL":"Your email",
+    "NAME": "Your name",
+    "EMAIL": "Your email",
     "MESSAGE": "your message",
-    "PRIVACY_POLICY":"privacy policy",
-    "PRIVACY_POLICY_TEXT_1":"I've read the",
-    "PRIVACY_POLICY_TEXT_2":"and agree to the processing of my data as outlined.",
-    "BUTTON":"Send message",
-    "ERR_NAME":"please enter a name",
-    "ERR_EMAIL":"please enter a email",
-    "ERR_MESSAGE":"please enter a message",
-    "ERR_PRIVACY_POLICY":"You need to accept the privacy policy before submitting."
+    "PRIVACY_POLICY": "privacy policy",
+    "PRIVACY_POLICY_TEXT_1": "I've read the",
+    "PRIVACY_POLICY_TEXT_2": "and agree to the processing of my data as outlined.",
+    "BUTTON": "Send message",
+    "ERR_NAME": "please enter a name",
+    "ERR_EMAIL": "please enter a email",
+    "ERR_MESSAGE": "please enter a message",
+    "ERR_PRIVACY_POLICY": "You need to accept the privacy policy before submitting.",
+    "SUCCESS": "Message sent successfully!"
   },
-
-  "LEGALNOTICE":{
-    "LEGALNOTICE":"LegalNotice"
+  "LEGALNOTICE": {
+    "LEGALNOTICE": "LegalNotice"
   },
-
-    "PRIVACYPOLICY":{
-      "TITLE": "Sag Hallo"
+  "PRIVACYPOLICY": {
+    "TITLE": "Sag Hallo"
   },
-
-  "IMPRINT":{
-      "TITLE": "Legal Notice",
-      "IMPRINT": "Imprint",
-      "BOARD":"Exploring the Board",
-      "PORTFOLIO": "Portfolio",
-      "DEV_GMBH": "Developer Akademie GmbH",
-      "DEV_AKADEMIE": "Developer Akademie",
-
-      "SECTION_1_TITLE": "Acceptance of terms",
-      "SECTION_1_TEXT_1": "By accessing and using ",
-      "SECTION_1_PORTFOLIO": "Portfolio",
-      "SECTION_1_TEXT_2": ", you acknowledge and agree to the following terms and conditions, and any policies, guidelines, or amendments thereto that may be presented to you from time to time. We, the listed students, may update or change the terms and conditions from time to time without notice.",
-
-      "SECTION_2_TITLE": "Scope and ownership of the product",
-
-      "SECTION_2_TEXT_1": " has been developed as part of a student group project in a web development bootcamp at the ",
-      "SECTION_2_TEXT_2": "It has an educational purpose and is not intended for extensive personal & business usage. As such, we cannot guarantee consistent availability, reliability, accuracy, or any other aspect of quality regarding this Product.",
-      "SECTION_2_TEXT_3": "The design of ",
-      "SECTION_2_TEXT_4": "is owned by the",
-      "SECTION_2_TEXT_5": " Unauthorized use, reproduction, modification, distribution, or replication of the design is strictly prohibited.",
-
-      "SECTION_3_TITLE": "Proprietary rights",
-      "SECTION_3_TEXT_1": "Aside from the design owned by ",
-      "SECTION_3_TEXT_2": ", we the listed students, retain all proprietary rights in ",
-      "SECTION_3_TEXT_3": ", including any associated copyrighted material, trademarks, and other proprietary information.",
-
-      "SECTION_4_TITLE": "Use of the product",
-      "SECTION_4_TEXT_1": " is intended to be used for lawful purposes only, in accordance with all applicable laws and regulations. Any use of ",
-      "SECTION_4_TEXT_2": " for illegal activities, or to harass, harm, threaten, or intimidate another person, is strictly prohibited. You are solely responsible for your interactions with other users of ",
-
-      "SECTION_5_TITLE": "Disclaimer of warranties and limitation of liability",
-      "SECTION_5_TEXT_1": " is provided \"as is\" without warranty of any kind, whether express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event will we, the listed students, or the ",
-      "SECTION_5_TEXT_2": ", be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to damages for loss of profits, goodwill, use, data, or other intangible losses, even if we have been advised of the possibility of such damages, arising out of or in connection with the use or performance of ",
-
-      "SECTION_6_TITLE": "Indemnity",
-      "SECTION_6_TEXT_1": "You agree to indemnify, defend and hold harmless us, the listed students, the ",
-      "SECTION_6_TEXT_2": ", and our affiliates, partners, officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of ",
-      "SECTION_6_TEXT_3": " and/or your breach of this Legal Notice.",
-
-      "CONTACT_TEXT": "For any questions or notices, please contact us at ",
-      "DATE": "Date: February 2026"
+  "IMPRINT": {
+    "TITLE": "Legal Notice",
+    "IMPRINT": "Imprint",
+    "BOARD": "Exploring the Board",
+    "PORTFOLIO": "Portfolio",
+    "DEV_GMBH": "Developer Akademie GmbH",
+    "DEV_AKADEMIE": "Developer Akademie",
+    "SECTION_1_TITLE": "Acceptance of terms",
+    "SECTION_1_TEXT_1": "By accessing and using ",
+    "SECTION_1_PORTFOLIO": "Portfolio",
+    "SECTION_1_TEXT_2": ", you acknowledge and agree to the following terms and conditions, and any policies, guidelines, or amendments thereto that may be presented to you from time to time. We, the listed students, may update or change the terms and conditions from time to time without notice.",
+    "SECTION_2_TITLE": "Scope and ownership of the product",
+    "SECTION_2_TEXT_1": " has been developed as part of a student group project in a web development bootcamp at the ",
+    "SECTION_2_TEXT_2": "It has an educational purpose and is not intended for extensive personal & business usage. As such, we cannot guarantee consistent availability, reliability, accuracy, or any other aspect of quality regarding this Product.",
+    "SECTION_2_TEXT_3": "The design of ",
+    "SECTION_2_TEXT_4": "is owned by the",
+    "SECTION_2_TEXT_5": " Unauthorized use, reproduction, modification, distribution, or replication of the design is strictly prohibited.",
+    "SECTION_3_TITLE": "Proprietary rights",
+    "SECTION_3_TEXT_1": "Aside from the design owned by ",
+    "SECTION_3_TEXT_2": ", we the listed students, retain all proprietary rights in ",
+    "SECTION_3_TEXT_3": ", including any associated copyrighted material, trademarks, and other proprietary information.",
+    "SECTION_4_TITLE": "Use of the product",
+    "SECTION_4_TEXT_1": " is intended to be used for lawful purposes only, in accordance with all applicable laws and regulations. Any use of ",
+    "SECTION_4_TEXT_2": " for illegal activities, or to harass, harm, threaten, or intimidate another person, is strictly prohibited. You are solely responsible for your interactions with other users of ",
+    "SECTION_5_TITLE": "Disclaimer of warranties and limitation of liability",
+    "SECTION_5_TEXT_1": " is provided \"as is\" without warranty of any kind, whether express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event will we, the listed students, or the ",
+    "SECTION_5_TEXT_2": ", be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to damages for loss of profits, goodwill, use, data, or other intangible losses, even if we have been advised of the possibility of such damages, arising out of or in connection with the use or performance of ",
+    "SECTION_6_TITLE": "Indemnity",
+    "SECTION_6_TEXT_1": "You agree to indemnify, defend and hold harmless us, the listed students, the ",
+    "SECTION_6_TEXT_2": ", and our affiliates, partners, officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of ",
+    "SECTION_6_TEXT_3": " and/or your breach of this Legal Notice.",
+    "CONTACT_TEXT": "For any questions or notices, please contact us at ",
+    "DATE": "Date: February 2026"
   },
-
-   "PRIVACY": {
+  "PRIVACY": {
     "HEADLINE": "Privacy Policy",
     "SECTION_1": {
       "TITLE": "1. Data Protection at a Glance",
@@ -197,5 +180,4 @@
       "P_7": "The processing of this data takes place on the basis of Art. 6 Para. 1 lit. b GDPR or Art. 6 Para. 1 lit. f GDPR. The data remains with us until the purpose for data storage no longer applies or you request deletion."
     }
   }
-
 }

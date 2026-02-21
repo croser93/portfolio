@@ -11,8 +11,8 @@ import { TranslatePipe } from '@ngx-translate/core';
   styleUrl: './contact-components.scss',
 })
 export class ContactComponents {
- 
-http = inject(HttpClient)
+
+  http = inject(HttpClient)
 
   contactData = {
     name: "",
@@ -21,7 +21,8 @@ http = inject(HttpClient)
     checkBox: "",
   }
 
-  mailTest = false;
+  mailTest = true;
+  mailSent = false;
 
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
@@ -39,8 +40,7 @@ http = inject(HttpClient)
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
-            ngForm.resetForm();
+            this.showSuccessFeedback(ngForm);
           },
           error: (error) => {
             console.error(error);
@@ -49,12 +49,19 @@ http = inject(HttpClient)
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       console.log("gesendet" + this.contactData)
-
-      ngForm.resetForm();
+      this.showSuccessFeedback(ngForm);
     }
   }
 
+  showSuccessFeedback(ngForm: NgForm) {
+    this.mailSent = true;
+    setTimeout(() => {
+      this.mailSent = false;
+      ngForm.resetForm();
+    }, 3000);
+  }
+
   scrollTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
