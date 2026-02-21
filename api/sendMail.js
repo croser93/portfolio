@@ -22,7 +22,7 @@ export default async function handler(req, res) {
     const { name, email, message } = req.body;
 
     const transporter = nodemailer.createTransport({
-    host: process.env.EMAIL_HOST,
+    host: "smtp.ionos.de",
     port: 465,
     secure: true, 
     auth: {
