@@ -21,7 +21,7 @@ http = inject(HttpClient)
     checkBox: "",
   }
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
