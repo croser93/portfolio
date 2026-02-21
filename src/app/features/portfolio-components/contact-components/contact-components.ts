@@ -21,15 +21,15 @@ export class ContactComponents {
     checkBox: "",
   }
 
-  mailTest = true;
+  mailTest = false;
   mailSent = false;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
-    body: (payload: any) => JSON.stringify(payload),
+    endPoint: '/api/sendMail',
+    body: (payload: any) => payload,
     options: {
       headers: {
-        'Content-Type': 'text/plain',
+        'Content-Type': 'application/json',
         responseType: 'text',
       },
     },
@@ -37,7 +37,7 @@ export class ContactComponents {
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+      this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
         .subscribe({
           next: (response) => {
             this.showSuccessFeedback(ngForm);
