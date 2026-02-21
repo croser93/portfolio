@@ -32,8 +32,8 @@ export default async function handler(req, res) {
   });
 
     await transporter.sendMail({
-      from: '"Website Contact" <contact@lucasgraf.com>',
-      to: "contact@lucasgraf.com",
+      from: '"Website Contact" <contact@maik-groth.com>',
+      to: "contact@maik-groth.com",
       subject: `New Contact from ${name}`,
       html: `
         <p><strong>Name:</strong> ${name}</p>
