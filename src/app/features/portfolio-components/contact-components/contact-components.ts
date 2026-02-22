@@ -21,27 +21,25 @@ export class ContactComponents {
     checkBox: "",
   }
 
+  mailTest = true;
   mailSent = false;
-  isSending = false;
 
   post = {
     endPoint: '/api/sendMail',
-    body: (payload: any) => JSON.stringify(payload),
+    body: (payload: any) => payload,
     options: {
       headers: {
         'Content-Type': 'application/json',
+        responseType: 'text',
       },
-      responseType: 'text' as 'json',
     },
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.isSending) {
-      this.isSending = true;
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
         .subscribe({
           next: (response) => {
-            this.isSending = false;
             this.showSuccessFeedback(ngForm);
           },
           error: (error) => {
@@ -49,6 +47,9 @@ export class ContactComponents {
           },
           complete: () => console.info('send post complete'),
         });
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+      console.log("gesendet" + this.contactData)
+      this.showSuccessFeedback(ngForm);
     }
   }
 
@@ -57,7 +58,7 @@ export class ContactComponents {
     setTimeout(() => {
       this.mailSent = false;
       ngForm.resetForm();
-    }, 4000);
+    }, 3000);
   }
 
   scrollTop() {
