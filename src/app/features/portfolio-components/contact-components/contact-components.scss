@@ -267,7 +267,7 @@ input.ng-invalid.ng-touched {
     padding: 40px;
     border-radius: 20px;
     @include dpf-col($g: 24px);
-    box-shadow: 0 0 20px rgba(0, 188, 143, 0.4);
+    box-shadow: 0 0 20px rgba(74, 71, 255, 0.4);
 
     >span {
         color: white;

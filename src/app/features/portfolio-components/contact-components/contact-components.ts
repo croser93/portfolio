@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectorRef } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterLink } from "@angular/router";
 import { TranslatePipe } from '@ngx-translate/core';
@@ -13,6 +13,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 export class ContactComponents {
 
   http = inject(HttpClient)
+  cdr = inject(ChangeDetectorRef)
 
   contactData = {
     name: "",
@@ -41,8 +42,14 @@ export class ContactComponents {
       this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
         .subscribe({
           next: (response) => {
+            this.mailSent = true;
             this.isSending = false;
-            this.showSuccessFeedback(ngForm);
+            ngForm.resetForm();
+            setTimeout(() => {
+              this.mailSent = false;
+              this.cdr.detectChanges();
+            }, 3000);
+
           },
           error: (error) => {
             this.isSending = false;
@@ -50,17 +57,8 @@ export class ContactComponents {
           },
           complete: () => console.info('send post complete'),
         });
-    } 
+    }
   }
-
-  showSuccessFeedback(ngForm: NgForm) {
-    this.mailSent = true;
-    setTimeout(() => {
-      this.mailSent = false;
-      ngForm.resetForm();
-    }, 3000);
-  }
-
   scrollTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
