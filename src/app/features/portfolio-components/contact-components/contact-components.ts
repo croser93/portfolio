@@ -21,36 +21,36 @@ export class ContactComponents {
     checkBox: "",
   }
 
-  mailTest = true;
+  isSending = false;
   mailSent = false;
 
   post = {
     endPoint: '/api/sendMail',
-    body: (payload: any) => payload,
+    body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
         'Content-Type': 'application/json',
-        responseType: 'text',
       },
+      responseType: 'text' as 'json',
     },
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid && !this.isSending) {
+      this.isSending = true;
       this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
         .subscribe({
           next: (response) => {
+            this.isSending = false;
             this.showSuccessFeedback(ngForm);
           },
           error: (error) => {
+            this.isSending = false;
             console.error(error);
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      console.log("gesendet" + this.contactData)
-      this.showSuccessFeedback(ngForm);
-    }
+    } 
   }
 
   showSuccessFeedback(ngForm: NgForm) {
