@@ -3,8 +3,15 @@
     "NAV": {
       "ABOUT": "Über Mich",
       "SKILLS": "Fähigkeiten",
-      "PROJECTS": "Portfolio"
+      "PROJECTS": "Portfolio",
+      "HELLO":"Sag Hallo"
     }
+  },
+     "HERO": {
+    "TITLE": "Frontend",
+    "TITLE1": "Entwickler",
+    "SCROLL": "Scroll",
+    "DOWN": "Runter"
   },
   "ABOUT_ME": {
     "TITLE": "Über Mich",
