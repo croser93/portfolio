@@ -1,8 +1,9 @@
 @use '../../../styles/variables' as *;
 section{
-    @include dpf-col($ai: flex-start, $g: 64px);
+    @include dpf-col($jc: flex-start, $g: 64px);
     width: 100%;
-    padding:120px 200px;
+    padding: 120px 200px;
+    min-height: calc(100vh - 154px);
 }
 
 span{
@@ -24,6 +25,7 @@ ul{
     display: flex;
         flex-direction: column;
         gap: 24px;
+        max-width: 1680px;
     >div{
         display: flex;
         flex-direction: column;

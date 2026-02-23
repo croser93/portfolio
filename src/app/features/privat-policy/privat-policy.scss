@@ -1,9 +1,14 @@
 @use '../../../styles/variables' as *;
 section{
-@include dpf ($ai: flex-start, $g: 64px);
+@include dpf ($jc: flex-start, $g: 64px);
 width: 100%;
     padding:120px 200px;
-     flex-direction: column;
+    flex-direction: column;
+    min-height: calc(100vh - 154px);
+}
+
+.content{
+    max-width: 1680px;
 }
 
 .privacy_content{
