@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectorRef } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterLink } from "@angular/router";
 import { TranslatePipe } from '@ngx-translate/core';
@@ -11,8 +11,9 @@ import { TranslatePipe } from '@ngx-translate/core';
   styleUrl: './contact-components.scss',
 })
 export class ContactComponents {
- 
-http = inject(HttpClient)
+
+  http = inject(HttpClient)
+  cdr = inject(ChangeDetectorRef)
 
   contactData = {
     name: "",
@@ -21,40 +22,44 @@ http = inject(HttpClient)
     checkBox: "",
   }
 
-  mailTest = true;
+  isSending = false;
+  mailSent = false;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: '/api/sendMail',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
+        'Content-Type': 'application/json',
       },
+      responseType: 'text' as 'json',
     },
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+    if (ngForm.submitted && ngForm.form.valid && !this.isSending) {
+      this.isSending = true;
+      this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
         .subscribe({
           next: (response) => {
-
+            this.mailSent = true;
+            this.isSending = false;
             ngForm.resetForm();
+            setTimeout(() => {
+              this.mailSent = false;
+              this.cdr.detectChanges();
+            }, 3000);
+
           },
           error: (error) => {
+            this.isSending = false;
             console.error(error);
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      console.log("gesendet" + this.contactData)
-
-      ngForm.resetForm();
     }
   }
-
   scrollTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }

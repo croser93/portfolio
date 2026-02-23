@@ -10,6 +10,17 @@
         </div>
         <div class="form-container">
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" autocomplete="off">
+                @if (mailSent) {
+                <div class="success-overlay">
+                    <div class="success-box">
+                        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                            <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                            <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                        </svg>
+                        <span>{{ 'CONTACT.SUCCESS' | translate }}</span>
+                    </div>
+                </div>
+                }
                 <div class="formInput">
                     <div class="form-group">
                         <input #name="ngModel" [(ngModel)]="contactData.name" minlength="1" maxlength="40" type="text"
@@ -47,8 +58,9 @@
                         <input #checkBox="ngModel" [(ngModel)]="contactData.checkBox" name="checkBox" type="checkbox"
                             id="privacy" required>
                         <div for="privacy" class="checkbox-label">
-                            {{ 'CONTACT.PRIVACY_POLICY_TEXT_1' | translate }} <a (click)="scrollTop()" routerLink="privacy-policy"
-                                class="privacy-link">{{ 'CONTACT.PRIVACY_POLICY' | translate }}</a> {{
+                            {{ 'CONTACT.PRIVACY_POLICY_TEXT_1' | translate }} <a (click)="scrollTop()"
+                                routerLink="privacy-policy" class="privacy-link">{{ 'CONTACT.PRIVACY_POLICY' | translate
+                                }}</a> {{
                             'CONTACT.PRIVACY_POLICY_TEXT_2' | translate }}
                         </div>
                     </div>

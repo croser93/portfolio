@@ -158,6 +158,7 @@ h2 {
   height: calc((100vh - 64px) / 2);
 
   >a {
+    @include dpf();
     position: relative;
     text-decoration: none;
     color: black;

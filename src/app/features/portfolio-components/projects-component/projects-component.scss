@@ -71,7 +71,13 @@ img{
         >p {
             font-family: Overpass;
            font-size: clamp(1rem, 4vw, 1.25rem);
-        }      
+        } 
+        >.linkContainer{
+            @include dpf($g:16px);
+            >a{
+                width: 250px;
+            }
+        } 
     }
 }
 
@@ -132,4 +138,19 @@ img{
             justify-content: flex-start;
         }
     }
+}
+
+@media (max-width: 600px) {
+    .linkContainer{
+        flex-direction: column;
+    }
+
+    .hoverBtn{
+
+    width: 180px;
+        &:hover{
+            font-weight: bolder;
+            width: 220px;
+        }   
+}
 }
