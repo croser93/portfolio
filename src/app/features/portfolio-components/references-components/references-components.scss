@@ -9,7 +9,7 @@ section{
     @include dpf($g: 40px);
     width: 100%;
     position: relative;
-    padding: 0 60px; // Platz für Buttons
+    padding: 0 60px; 
 }
 
 .refContainer {
@@ -121,7 +121,6 @@ span {
         gap: 10px;
     }
     .card {
-
         transform: translateX(calc(var(--offset) * 200px)) scale(calc(1 - abs(var(--offset)) * 0.2)) translateZ(calc(abs(var(--offset)) * -150px));
     }
 }
@@ -138,6 +137,9 @@ span {
     .refContainer{
         height: 580px;
     }
+    .card {
+    transform: translateX(calc(var(--offset) * 80px)) scale(calc(1 - abs(var(--offset)) * 0.2)) translateZ(calc(abs(var(--offset)) * -150px));
+    }
 
     .carousel-track{
         width: clamp(208px, 72vw, 600px);
@@ -149,7 +151,6 @@ span {
     max-width: 500px;
     padding: 8px;
     }
-
     .card {
     transform: translateX(calc(var(--offset) * 80px)) scale(calc(1 - abs(var(--offset)) * 0.2)) translateZ(calc(abs(var(--offset)) * -150px));
     }

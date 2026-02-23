@@ -12,10 +12,6 @@ export class Footer {
 
   constructor(private router: Router) {}
 
-  scrollTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
   isSubRoute(): boolean {
     return  this.router.url == '/legal-notice' || this.router.url == '/privacy-policy'
   }

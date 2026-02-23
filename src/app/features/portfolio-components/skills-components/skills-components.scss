@@ -21,49 +21,67 @@ section {
     grid-template-columns: repeat(5, 1fr);
     gap: 78px 20px;
     width: 100%;
-
+    cursor: pointer;
+    
     >.skill-item {
         @include dpf ();
+        transition: transform 0.3s ease-in-out;
 
+        &:hover{
+            transform: scale(1.2);
+        }
+
+    }
+}
+
+.continuedLearning {
+    @include dpf ($g: 16px);
+    position: relative;
+    cursor: pointer;
+    
+
+    >img {
+        transition: transform 0.3s ease-in-out;
+        height: clamp(48px, 10vw, 80px);
+        cursor: pointer;
+    }
+
+    &:hover {
         >img {
-            transition: transform 0.3s ease-in-out;
+            transform: scale(1.2);
+            cursor: pointer;
+        }
 
-            &:hover {
-                transform: scale(1.4);
-                cursor: pointer;
-            }
+        .bubble {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(-20px);
         }
     }
 }
 
-.continuedLearing {
-    @include dpf ($g: 16px);
-    position: relative;
-
-    &:hover {
-        .bubble {
-            opacity: 1;
-            visibility: visible;
-            transform: translateX(-15%) translateY(-20px);
-        }
-    }
+.learningContainer {
+    @include dpf ($g: 24px);
 }
 
 .bubble {
     @include dpf-col ($g: 16px);
     position: absolute;
-    bottom: 60%;
-    left: 20%;
-    transform: translateX(-15%) translateY(0px);
+    bottom: 120%;
+    left: 100%;
+    transform: translateX(-50%) translateY(0px);
     background-color: var(--bg-color);
     padding: 16px 24px;
-    border-radius: 30px 30px 30px 0px;
+    border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     border: 1px solid black;
     opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    min-width: 200px;
     max-width: 300px;
     transition: all 0.3s ease-out;
-    z-index: 3;
+    z-index: 2;
     text-align: center;
 
 
@@ -109,13 +127,6 @@ section {
     }
 }
 
-.continuedLearing {
-    padding: 0px 16px;
-
-    >img {
-        height: clamp(48px, 10vw, 80px);
-    }
-}
 
 @media (max-width: 900px) {
     .skills {
@@ -126,6 +137,19 @@ section {
     .h2Container {
         top: calc(-5.52vw - 4.35px);
         padding: 0 8px;
+    }
+
+    .learningContainer {
+        flex-direction: column;
+    }
+    .bubble {
+    left: 50%;
+
+    }
+
+    span {
+    text-align: center;
+
     }
 
 }

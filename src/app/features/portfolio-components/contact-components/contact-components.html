@@ -54,13 +54,12 @@
                         }
                     </div>
 
-                    <div class="checkbox-container">
+                    <div class="checkbox-container"
+                        [class.highlight-pulse]="name.valid && email.valid && message.valid && !checkBox.valid">
                         <input #checkBox="ngModel" [(ngModel)]="contactData.checkBox" name="checkBox" type="checkbox"
                             id="privacy" required>
                         <div for="privacy" class="checkbox-label">
-                            {{ 'CONTACT.PRIVACY_POLICY_TEXT_1' | translate }} <a (click)="scrollTop()"
-                                routerLink="privacy-policy" class="privacy-link">{{ 'CONTACT.PRIVACY_POLICY' | translate
-                                }}</a> {{
+                            {{ 'CONTACT.PRIVACY_POLICY_TEXT_1' | translate }} <a routerLink="privacy-policy" class="privacy-link">{{ 'CONTACT.PRIVACY_POLICY' | translate }}</a> {{
                             'CONTACT.PRIVACY_POLICY_TEXT_2' | translate }}
                         </div>
                     </div>
