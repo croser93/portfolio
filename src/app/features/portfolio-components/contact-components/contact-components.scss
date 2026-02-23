@@ -110,12 +110,14 @@ textarea {
     resize: vertical;
     min-height: 120px;
     max-height: 220px;
+    padding: 12px 24px;
 }
 
 .checkbox-container {
     @include dpf ($ai: flex-start);
     gap: 10px;
     cursor: pointer;
+     padding: 8px;
 }
 
 input[type="checkbox"] {
@@ -135,6 +137,28 @@ input[type="checkbox"] {
 
     &:hover {
         text-decoration: underline;
+    }
+}
+
+.highlight-pulse {
+    animation: pulse-bg 3s infinite ease-in-out;
+    border-radius: 8px;
+    padding: 8px;
+
+}
+
+@keyframes pulse-bg {
+    0% {
+        background-color: transparent;
+    }
+
+    50% {
+        background-color: rgba(74, 71, 255, 0.25);
+    }
+
+
+    100% {
+        background-color: transparent;
     }
 }
 

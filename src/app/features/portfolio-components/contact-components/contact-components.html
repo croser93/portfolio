@@ -54,7 +54,8 @@
                         }
                     </div>
 
-                    <div class="checkbox-container">
+                    <div class="checkbox-container"
+                        [class.highlight-pulse]="name.valid && email.valid && message.valid && !checkBox.valid">
                         <input #checkBox="ngModel" [(ngModel)]="contactData.checkBox" name="checkBox" type="checkbox"
                             id="privacy" required>
                         <div for="privacy" class="checkbox-label">
