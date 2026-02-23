@@ -54,24 +54,22 @@
                         }
                     </div>
 
-                    <div class="checkbox-container"
-                        [class.highlight-pulse]="name.valid && email.valid && message.valid && !checkBox.valid">
-                        <input #checkBox="ngModel" [(ngModel)]="contactData.checkBox" name="checkBox" type="checkbox"
-                            id="privacy" required>
+                    <div class="checkbox-container">
+                        <input #checkBox="ngModel" [(ngModel)]="contactData.checkBox" name="checkBox" type="checkbox"id="privacy" required>
                         <div for="privacy" class="checkbox-label">
-                            {{ 'CONTACT.PRIVACY_POLICY_TEXT_1' | translate }} <a routerLink="privacy-policy" class="privacy-link">{{ 'CONTACT.PRIVACY_POLICY' | translate }}</a> {{
-                            'CONTACT.PRIVACY_POLICY_TEXT_2' | translate }}
+                            {{ 'CONTACT.PRIVACY_POLICY_TEXT_1' | translate }} <a routerLink="privacy-policy" class="privacy-link">{{ 'CONTACT.PRIVACY_POLICY' | translate }}</a> {{ 'CONTACT.PRIVACY_POLICY_TEXT_2' | translate }}
                         </div>
                     </div>
 
                     <div class="errorContainer">
-                        @if (!checkBox.valid && checkBox.touched) {
+                        @if (checkBox.invalid && (checkBox.touched || contactForm.submitted)) {
                         <span class="errorMassage">{{ 'CONTACT.ERR_PRIVACY_POLICY' | translate }}</span>
                         }
                     </div>
                 </div>
                 <div class="button-container">
-                    <button [disabled]="contactForm.invalid" type="submit">{{ 'CONTACT.BUTTON' | translate }}</button>
+                    <button [disabled]="name.invalid || email.invalid || message.invalid" type="submit">{{
+                        'CONTACT.BUTTON' | translate }}</button>
                     <a class="homeArrow" href="#home"><img src="assets/icon/arrow-short.svg" alt=""></a>
                 </div>
             </form>

@@ -57,6 +57,7 @@ h4{
             text-decoration: none;
             color: black;
             white-space: nowrap; 
+            cursor: pointer;
         }
     }
 
@@ -136,5 +137,24 @@ h4{
     .heroContent {
         top: 85%;
 
+    }
+
+}
+@media (orientation: landscape) and (max-height: 500px)  {
+    .heroContent {
+            bottom: 0px !important;
+            top: auto;
+        .scrollArrow{
+            display: none;
+        }
+        >.mailRef{
+            transform: rotate(0deg);
+            bottom: 0px;
+            >a {
+                font-size: 16px !important;
+                padding: 8px;
+
+            }
+        }   
     }
 }

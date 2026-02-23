@@ -1,7 +1,7 @@
 @use '../../../../styles/variables' as *;
 section{
     @include dpf ($jc: space-between, $ai: flex-start);
-    height: 720px;
+    margin-top: 120px;
 }
 button,
 
