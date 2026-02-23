@@ -140,28 +140,6 @@ input[type="checkbox"] {
     }
 }
 
-.highlight-pulse {
-    animation: pulse-bg 3s infinite ease-in-out;
-    border-radius: 8px;
-    padding: 8px;
-
-}
-
-@keyframes pulse-bg {
-    0% {
-        background-color: transparent;
-    }
-
-    50% {
-        background-color: rgba(74, 71, 255, 0.25);
-    }
-
-
-    100% {
-        background-color: transparent;
-    }
-}
-
 .button-container {
     display: grid;
     grid-template-columns: 1fr auto 1fr;

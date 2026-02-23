@@ -19,7 +19,7 @@ export class ContactComponents {
     name: "",
     email: "",
     message: "",
-    checkBox: "",
+    checkBox: ""
   }
 
   isSending = false;
