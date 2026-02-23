@@ -109,3 +109,32 @@ h4{
     }
 }
 
+@media (max-Height: 750px) {
+    .heroContent {
+    >.mailRef{
+        >a {
+            font-size: 16px !important;
+            padding: 8px;
+
+        }
+    }   
+    .scrollArrow {
+        > .arrowContainer {
+            height: 100px;
+            width: 60px;
+            > img {
+                height: 54px
+            }
+        
+        }
+    }
+    span{
+        font-size: 16px !important;
+    }
+
+    }
+    .heroContent {
+        top: 85%;
+
+    }
+}
