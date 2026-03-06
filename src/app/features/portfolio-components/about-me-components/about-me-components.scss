@@ -25,7 +25,9 @@ button,
 
 .imgContainer{
     > img {
-        height: clamp(30rem, 43vw, 35rem)
+        height: clamp(30rem, 43vw, 32rem);
+        border-radius: 20px;
+        border: solid black 1px
     }
 }
 
