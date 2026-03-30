@@ -17,7 +17,7 @@
 
   "ABOUT_ME": {
     "TITLE": "About Me",
-    "DESCRIPTION": "I am currently completing a training program to become a Full-Stack Developer and have already successfully finished the frontend part. During this time, I work extensively with modern web technologies and continuously expand my knowledge step by step.Originally, I come from the automotive industry. What interested me most there was troubleshooting and developing suitable solutions to problems. This structured way of thinking still helps me today in software development.I enjoy working my way into new topics independently and step by step. If something doesn’t work right away, I keep working on it and try different approaches until I find a solution. It is important to me to keep developing both professionally and personally while continuing to learn.",
+    "DESCRIPTION": "I'm currently completing advanced training as a Full-Stack Developer and have successfully finished the front-end part. I'm continuously learning new web technologies and steadily expanding my technical knowledge. Before transitioning into software development, I worked in the automotive industry. I particularly enjoyed troubleshooting and finding suitable solutions. This structured approach still helps me today when programming. I like to learn new topics independently to develop both professionally and personally.",
     "LOCATION": "Based in Lübeck / Krummesse",
     "REMOTE": "Open to work Remote",
     "BUTTON": "Let's Talk"
@@ -39,8 +39,7 @@
     "TITLE": "References",
     "DESCRIPTION": "I thrive both independently and as part of a team. Here's what my colleagues have to say about working with me.",
     "1": "Maik is a highly passionate and driven developer. His work ethic and commitment throughout the entire project were truly remarkable, handling every task with meticulous care and consistent reliability. Beyond his technical skills, he is a dedicated team player who fosters a positive atmosphere and proactively supports his colleagues with insightful solutions. Maik is a genuine asset to any development team.",
-    "2": "Working with you was a great experience. You collaborate well within a team and consistently show strong dedication. Your solid understanding of CSS stood out, especially when you successfully resolved a challenging issue. Your code was always clean and well-structured, making it easy to understand and maintain. You also contributed positively to the team’s productivity by fostering a supportive and motivating work environment.",
-    "3": "It was a great pleasure to work with Michael. He knows how to push and encourage team members to present the best work possible, always adding something to brainstorm. Regarding the well-being of group members, he was always present and available to listen and help others, with a great sense of humor as well."
+    "2": "Working with you was a great experience. You collaborate well within a team and consistently show strong dedication. Your solid understanding of CSS stood out, especially when you successfully resolved a challenging issue. Your code was always clean and well-structured, making it easy to understand and maintain. You also contributed positively to the team’s productivity by fostering a supportive and motivating work environment."
   },
   "CONTACT": {
     "TITLE": "Say Hi!",

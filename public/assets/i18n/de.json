@@ -15,7 +15,7 @@
   },
   "ABOUT_ME": {
     "TITLE": "Über Mich",
-    "DESCRIPTION": "Ich mache aktuell eine Weiterbildung zum Full-Stack-Entwickler und habe den Frontend-Teil bereits erfolgreich abgeschlossen. Dabei beschäftige ich mich intensiv mit modernen Webtechnologien und erweitere Schritt für Schritt mein Wissen. Ursprünglich komme ich aus der Kraftfahrzeugbranche. Besonders die Fehlersuche und das Finden von passenden Lösungsansätzen haben mich dort immer besonders interessiert.Diese strukturierte Denkweise hilft mir auch heute in der Softwareentwicklung. In neue Themen arbeite ich mir gerne selbstständig und Schritt für Schritt ein. Wenn etwas nicht sofort funktioniert, bleibe ich dran und probiere verschiedene Lösungswege aus, bis ich eine passende Lösung gefunden habe. Mir ist wichtig, mich fachlich und persönlich weiterzuentwickeln und immer weiter dazuzulernen.",
+    "DESCRIPTION": "Aktuell mache ich eine Weiterbildung zum Full-Stack Entwickler und habe den Front-End Teil erfolgreich abgeschlossen. Dabei lerne ich kontinuierlich neue Webtechnologien und baue mein technisches Wissen Schritt für Schritt weiter aus. Bevor ich in die Softwareentwicklung eingestiegen bin, habe ich in der Kraftfahrzeugbranche gearbeitet. Besonders die Fehlersuche und die damit verbundenen passenden Lösungen haben mir dort immer viel Spaß gemacht. Diese strukturierte Herangehensweise hilft mir auch heute beim Programmieren. Ich arbeite mich gerne selbstständig in neue Themen ein, um mich fachlich und persönlich weiterzuentwickeln.",
     "LOCATION": "Ich Wohne in Lübeck / Krummesse",
     "REMOTE": "Bin offen für remotes Arbeiten",
     "BUTTON": "Lass uns Schreiben"
@@ -37,8 +37,7 @@
     "TITLE": "Referrenzen",
     "DESCRIPTION": "Ich arbeite sowohl eigenständig als auch im Team sehr zuverlässig und strukturiert. Hier ein paar Eindrücke von Kolleginnen und Kollegen zur Zusammenarbeit mit mir.",
     "1": "Maik ist ein sehr leidenschaftlicher und motivierter Entwickler. Seine Arbeitsmoral und Engagement waren über die gesamte Projektlaufzeit sehr bemerkenswert. Die Aufgaben die Maik übernahm wurden sehr sorgfältig und stets zuverlässig bearbeitet. Zudem ist er ein Teamplayer, der ein gutes Arbeitsklima erschaffen und anderen mit Lösungsvorschlägen bei Problemen geholfen hat. Eine Bereicherung für jedes Dev-Team.",
-    "2": "Die Arbeit mit dir war sehr gut. Du arbeitest zuverlässig, fleißig und bist ein echter Teamplayer. Besonders dein starkes CSS-Verständnis ist aufgefallen, vor allem bei der erfolgreichen Lösung eines kniffligen Fehlers. Dein Code war stets sauber und gut strukturiert, sodass man sich schnell einarbeiten konnte. Außerdem hast du durch deine positive Art zur Produktivität und einer guten Teamatmosphäre beigetragen.",
-    "3": "It was a great pleasure to work with Michael. He knows how to push and encourage team members to present the best work possible, always adding something to brainstorm. Regarding the well-being of group members, he was always present and available to listen and help others, with a great sense of humor as well."
+    "2": "Die Arbeit mit dir war sehr gut. Du arbeitest zuverlässig, fleißig und bist ein echter Teamplayer. Besonders dein starkes CSS-Verständnis ist aufgefallen, vor allem bei der erfolgreichen Lösung eines kniffligen Fehlers. Dein Code war stets sauber und gut strukturiert, sodass man sich schnell einarbeiten konnte. Außerdem hast du durch deine positive Art zur Produktivität und einer guten Teamatmosphäre beigetragen."
   },
   "CONTACT": {
     "TITLE": "Sag Hallo",

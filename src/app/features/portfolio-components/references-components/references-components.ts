@@ -6,6 +6,7 @@ interface comment {
       name:string 
       job:string 
       description:string 
+      github: string
 }
 
 @Component({
@@ -21,18 +22,14 @@ export class ReferencesComponents {
       name: 'Leon G Leuning',
       job: 'Team Partner',
       description: 'REFERENCES.2',
+      github: 'https://github.com/213Leon213'
     },
         {
       id: 2,
       name: 'Lucas Graf',
       job: 'Team Partner',
       description: 'REFERENCES.1',
-    },
-        {
-      id: 3,
-      name: 'V. Schuster',
-      job: 'Team Partner',
-      description: 'REFERENCES.3',
+      github: 'https://github.com/lucasxgraf'
     },
   ]
   
