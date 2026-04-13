@@ -16,6 +16,11 @@ section {
     gap: 60px;
 }
 
+.skill_icon {
+    height: 102px;
+    width: 106px;
+}   
+
 .skills-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -30,7 +35,11 @@ section {
             transform: scale(1.2);
         }
 
+        &:last-child {
+        grid-column: 3;
     }
+    }
+    
 }
 
 .continuedLearning {
