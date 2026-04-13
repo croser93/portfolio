@@ -22,10 +22,9 @@ interface projects {
   animations: [
   trigger('fadeAnimation', [
     transition(':enter', [
-      // Hier wird der komplette String eingefügt (z.B. 'translateX(-150px)')
       style({ opacity: 0, transform: '{{ startTransform }}' }), 
       animate('400ms ease-out', style({ opacity: 1, transform: 'translate(0,0)' }))
-    ], { params: { startTransform: 'translateX(-150px)' } }), // Standardwert
+    ], { params: { startTransform: 'translateX(-150px)' } }),
 
     transition(':leave', [
       animate('600ms ease-in', style({ opacity: 0, transform: '{{ endTransform }}' }))
@@ -38,7 +37,7 @@ export class ProjectsComponent {
   isMobile: boolean = false;
 
   ngOnInit() {
-  this.checkScreenSize(); // Das hier muss in den ngOnInit!
+  this.checkScreenSize();
 }
 
   @HostListener('window:resize')
