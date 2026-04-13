@@ -68,7 +68,7 @@ export class ProjectsComponent {
       titleId: '03',
       title: 'Code a Cuisine',
       codeBase: 'Angular | TypeScript | Supabase | N8N',
-      description: 'PORTFOLIO.2',
+      description: 'PORTFOLIO.3',
       img: 'assets/img/projects/CodeaCuisine.jpg',
       github: 'https://github.com/croser93/Code-a-Cuisine.git',
       demo: 'https://maik-groth.developerakademie.net/angular-projects/codeacuisine/recipe',
