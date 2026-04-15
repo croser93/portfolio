@@ -71,7 +71,7 @@ export class ProjectsComponent {
       description: 'PORTFOLIO.3',
       img: 'assets/img/projects/CodeaCuisine.jpg',
       github: 'https://github.com/croser93/Code-a-Cuisine.git',
-      demo: 'https://maik-groth.developerakademie.net/angular-projects/codeacuisine/recipe',
+      demo: 'https://code-a-cuisine.maik-groth.com',
     },
   ]
 
