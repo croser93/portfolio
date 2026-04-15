@@ -36,9 +36,7 @@ span {
     height: 100%;
     perspective: 900px;
     transform-style: preserve-3d;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include dpf();
 }
 
 .card {

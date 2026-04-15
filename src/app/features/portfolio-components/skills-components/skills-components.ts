@@ -19,6 +19,7 @@ export class SkillsComponents {
     'assets/icon/skills/scrum.svg',
     'assets/icon/skills/api.svg',
     'assets/icon/skills/md.svg',
+    'assets/icon/skills/n8n.svg',
   ]
 
 }

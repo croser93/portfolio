@@ -15,23 +15,24 @@
   },
   "ABOUT_ME": {
     "TITLE": "Über Mich",
-    "DESCRIPTION": "Aktuell mache ich eine Weiterbildung zum Full-Stack Entwickler und habe den Front-End Teil erfolgreich abgeschlossen. Dabei lerne ich kontinuierlich neue Webtechnologien und baue mein technisches Wissen Schritt für Schritt weiter aus. Bevor ich in die Softwareentwicklung eingestiegen bin, habe ich in der Kraftfahrzeugbranche gearbeitet. Besonders die Fehlersuche und die damit verbundenen passenden Lösungen haben mir dort immer viel Spaß gemacht. Diese strukturierte Herangehensweise hilft mir auch heute beim Programmieren. Ich arbeite mich gerne selbstständig in neue Themen ein, um mich fachlich und persönlich weiterzuentwickeln.",
+    "DESCRIPTION": "Hey, ich bin Maik & Front-End Entwickler mit Leidenschaft für Fehlersuche und Problemlösung.Als Kfz-Mechatroniker habe ich gelernt, Systeme zu verstehen, Fehler zu finden und Lösungen zu entwickeln. Genau das mache ich jetzt weiter, nur statt an Fahrzeugen arbeite ich jetzt an Code.Aktuell baue ich meine Skills Richtung Full-Stack aus, Backend folgt als nächstes. Für neue Technologien und Systeme kann ich mich immer begeistern.",
     "LOCATION": "Ich Wohne in Lübeck / Krummesse",
     "REMOTE": "Bin offen für remotes Arbeiten",
     "BUTTON": "Lass uns Schreiben"
   },
   "SKILLS": {
     "TITLE": "Fähigkeiten",
-    "DESCRIPTION-1": "Fähigkeit nicht dabei? ",
+    "DESCRIPTION-1": "Fähigkeit ist nicht dabei? ",
     "DESCRIPTION-2": "bin immer offen für neues.",
     "CONTACT": "Kontaktiere mich",
-    "LEARNING": "Ich habe ein besonderes Interesse am Lernen"
+    "LEARNING": "Bin ich auch interessiert"
   },
   "PORTFOLIO": {
     "TITLE": "Projekte",
     "DESCRIPTION": "Hier finden Sie eine Auswahl meiner Projekte um meine Fähigkeiten in der Praxis zu erleben.",
     "1": "Ein moderner Aufgabenmanager nach dem Kanban-Prinzip. Erstellen Sie Aufgaben, priorisieren Sie diese ganz einfach per Drag & Drop und verwalten Sie zusätzliche Benutzer sowie individuelle Kategorien übersichtlich an einem Ort.",
-    "2": "Ein simples Jump-and-Run-Spiel mit objektorientierter Grafik. Helfe Elvoron, Münzen und Energie zu sammeln, um gegen den Höllenkönig zu kämpfen."
+    "2": "Ein simples Jump-and-Run-Spiel mit objektorientierter Grafik. Helfe Elvoron, Münzen und Energie zu sammeln, um gegen den Höllenkönig zu kämpfen.",
+    "3": "Nie mehr ratlos, was Sie kochen sollen! Diese clevere App schlägt Rezepte basierend auf Zutaten vor, die Sie bereits zu Hause haben. Das spart Zeit, reduziert Lebensmittelverschwendung und sorgt für neue Kochinspiration."
   },
   "REFERENCES": {
     "TITLE": "Referrenzen",
@@ -42,10 +43,10 @@
   "CONTACT": {
     "TITLE": "Sag Hallo",
     "DESCRIPTION": "Möchten Sie ein neues Projekt besprechen?",
-    "DESCRIPTION_TEXT": "Sag hallo! Lass uns über deine Ideen sprechen und sie verwirklichen.",
-    "NAME": "dein Name",
+    "DESCRIPTION_TEXT": "Lass uns gemeinsam über Ideen und Möglichkeiten Sprechen.",
+    "NAME": "Vorname und Nachname",
     "EMAIL": "deine Email",
-    "MESSAGE": "deine Nachricht",
+    "MESSAGE": "Gib deine Nachricht ein",
     "PRIVACY_POLICY_TEXT_1": "Ich habe die ",
     "PRIVACY_POLICY_TEXT_2": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
     "PRIVACY_POLICY": "Datenschutzerklärung",

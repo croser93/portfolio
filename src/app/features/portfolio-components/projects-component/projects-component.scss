@@ -59,12 +59,12 @@ img{
         max-width: 550px;
         gap: 16px;
         >h3{
-            font-size: clamp(1.5rem, 8vw, 3rem);
+            font-size: clamp(1.5rem, 9vw, 3rem);
             font-family: Syne-ExtraBold;
         }
         >span{
            font-family: Overpass;
-           font-size: clamp(1.2rem, 8vw, 1.8rem);
+           font-size: clamp(1.2rem, 6vw, 1.8rem);
            color: var(--highlight2-color);
            font-weight: 600;
         }
@@ -152,5 +152,13 @@ img{
             font-weight: bolder;
             width: 220px;
         }   
-}
+    }
+
+    .projectsInfoText {
+        padding: 16px 0px !important;
+    }
+    .containerRight{
+        padding: 0px
+    }
+
 }

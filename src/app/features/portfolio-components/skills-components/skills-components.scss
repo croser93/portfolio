@@ -16,13 +16,17 @@ section {
     gap: 60px;
 }
 
+.skill_icon {
+    height: 102px;
+    width: 106px;
+}   
+
 .skills-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 78px 20px;
     width: 100%;
-    cursor: pointer;
-    
+
     >.skill-item {
         @include dpf ();
         transition: transform 0.3s ease-in-out;
@@ -31,7 +35,11 @@ section {
             transform: scale(1.2);
         }
 
+        &:last-child {
+        grid-column: 3;
     }
+    }
+    
 }
 
 .continuedLearning {
@@ -121,7 +129,6 @@ section {
 
         &:hover {
             transform: scale(1.1);
-            cursor: pointer;
         }
 
     }
